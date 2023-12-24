@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8D996832B37FF360062BC9E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D996822B37FF360062BC9E /* HTTPMethod.swift */; };
 		F8DA6D382B37DD7D00591D2B /* BaseProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DA6D372B37DD7D00591D2B /* BaseProjectApp.swift */; };
 		F8DA6D3A2B37DD7D00591D2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DA6D392B37DD7D00591D2B /* ContentView.swift */; };
 		F8DA6D3C2B37DD7E00591D2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8DA6D3B2B37DD7E00591D2B /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8D996822B37FF360062BC9E /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		F8DA6D342B37DD7D00591D2B /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DA6D372B37DD7D00591D2B /* BaseProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProjectApp.swift; sourceTree = "<group>"; };
 		F8DA6D392B37DD7D00591D2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F8D9967B2B37FD2D0062BC9E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F8DA6D372B37DD7D00591D2B /* BaseProjectApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F8D9967C2B37FD3B0062BC9E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F8D9967D2B37FD4B0062BC9E /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F8D9967D2B37FD4B0062BC9E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F8DA6D392B37DD7D00591D2B /* ContentView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F8D9967E2B37FD6A0062BC9E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F8D996812B37FE8B0062BC9E /* Networking */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F8D9967F2B37FD830062BC9E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8D996802B37FDEC0062BC9E /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F8D996802B37FDEC0062BC9E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F8DA6D3B2B37DD7E00591D2B /* Assets.xcassets */,
+				F8DA6D3D2B37DD7E00591D2B /* Preview Content */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F8D996812B37FE8B0062BC9E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F8D996822B37FF360062BC9E /* HTTPMethod.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		F8DA6D2B2B37DD7D00591D2B = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +110,10 @@
 		F8DA6D362B37DD7D00591D2B /* BaseProject */ = {
 			isa = PBXGroup;
 			children = (
-				F8DA6D372B37DD7D00591D2B /* BaseProjectApp.swift */,
-				F8DA6D392B37DD7D00591D2B /* ContentView.swift */,
-				F8DA6D3B2B37DD7E00591D2B /* Assets.xcassets */,
-				F8DA6D3D2B37DD7E00591D2B /* Preview Content */,
+				F8D9967B2B37FD2D0062BC9E /* App */,
+				F8D9967C2B37FD3B0062BC9E /* Features */,
+				F8D9967E2B37FD6A0062BC9E /* Base */,
+				F8D9967F2B37FD830062BC9E /* Resources */,
 			);
 			path = BaseProject;
 			sourceTree = "<group>";
@@ -139,6 +198,7 @@
 			files = (
 				F8DA6D3A2B37DD7D00591D2B /* ContentView.swift in Sources */,
 				F8DA6D382B37DD7D00591D2B /* BaseProjectApp.swift in Sources */,
+				F8D996832B37FF360062BC9E /* HTTPMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BaseProject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"BaseProject/Resources/Assets/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -299,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BaseProject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"BaseProject/Resources/Assets/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
