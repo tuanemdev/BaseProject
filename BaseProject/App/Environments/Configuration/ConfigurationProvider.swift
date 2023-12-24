@@ -20,7 +20,7 @@ enum ConfigurationProvider: EnvironmentConfig {
     /// Các key-value được khai báo trong file config cũng sẽ tự động xuất hiện tại: Project ➝ Targets ➝ Build Settings ➝ User-Defined (cuối cùng)
     /// Có thể thêm key-value trực tiếp bằng cách ấn button + (Add User-Defined Setting) (hàng trên cùng)
     /// Không cần thiết thêm vào Info.plist nếu không cần lấy giá trị khi code. Sử dụng trực tiếp trong Build Settings bằng cú pháp $(KEY)
-    enum Keys {
+    private enum Keys {
         static let config       = "CONFIGURATION"
         static let baseURL      = "BASE_URL"
     }
