@@ -1,0 +1,12 @@
+//
+//  Development.xcconfig
+//  BaseProject
+//
+//  Created by Nguyen Tuan Anh on 24/12/2023.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = dev.tuanem.com
+GOOGLE_SERVICE_INFO_PLIST = App/Environments/Development/GoogleService-Info-Development.plist
