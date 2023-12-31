@@ -8,25 +8,25 @@
 import Foundation
 
 protocol RequestManagerProtocol {
-    func perform<T: Decodable>(_ request: APIRequest, allowRetry: Bool) async throws -> T
+    func perform<T: Decodable>(_ request: some APIRequest, allowRetry: Bool) async throws -> T
 }
 
-class RequestManager: RequestManagerProtocol {
-    let apiManager: APIManagerProtocol
-    let parser: DataParserProtocol
-    let accessTokenManager: AccessTokenManagerProtocol
+final class RequestManager: RequestManagerProtocol {
+    let apiManager: any APIManagerProtocol
+    let parser: any DataParserProtocol
+    let accessTokenManager: any AccessTokenManagerProtocol
     
     init(
-        apiManager: APIManagerProtocol = APIManager(),
-        parser: DataParserProtocol = DataParser(),
-        accessTokenManager: AccessTokenManagerProtocol = AccessTokenManager(requestManager: RequestTokenManager())
+        apiManager: some APIManagerProtocol = APIManager(),
+        parser: some DataParserProtocol = DataParser(),
+        accessTokenManager: some AccessTokenManagerProtocol = AccessTokenManager(requestManager: RequestTokenManager())
     ) {
         self.apiManager = apiManager
         self.parser = parser
         self.accessTokenManager = accessTokenManager
     }
     
-    func perform<T: Decodable>(_ request: APIRequest, allowRetry: Bool = true) async throws -> T {
+    func perform<T: Decodable>(_ request: some APIRequest, allowRetry: Bool = true) async throws -> T {
         let authToken = try await requestAccessToken()
         
         do {
@@ -46,19 +46,19 @@ class RequestManager: RequestManagerProtocol {
     }
 }
 
-class RequestTokenManager: RequestManagerProtocol {
-    let apiManager: APIManagerProtocol
-    let parser: DataParserProtocol
+final class RequestTokenManager: RequestManagerProtocol {
+    let apiManager: any APIManagerProtocol
+    let parser: any DataParserProtocol
     
     init(
-        apiManager: APIManagerProtocol = APIManager(),
-        parser: DataParserProtocol = DataParser()
+        apiManager: some APIManagerProtocol = APIManager(),
+        parser: some DataParserProtocol = DataParser()
     ) {
         self.apiManager = apiManager
         self.parser = parser
     }
     
-    func perform<T: Decodable>(_ request: APIRequest, allowRetry: Bool = false) async throws -> T {
+    func perform<T: Decodable>(_ request: some APIRequest, allowRetry: Bool = false) async throws -> T {
         let data = try await apiManager.perform(request, authToken: "authToken")
         let decoded: T = try parser.parse(data: data)
         return decoded

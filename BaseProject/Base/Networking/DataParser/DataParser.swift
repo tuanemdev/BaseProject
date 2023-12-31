@@ -11,7 +11,7 @@ protocol DataParserProtocol {
     func parse<T: Decodable>(data: Data) throws -> T
 }
 
-class DataParser: DataParserProtocol {
+final class DataParser: DataParserProtocol {
     private var jsonDecoder: JSONDecoder
     
     init(jsonDecoder: JSONDecoder = JSONDecoder()) {

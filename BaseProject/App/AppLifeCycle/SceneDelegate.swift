@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate, ObservableObject {
+final class SceneDelegate: NSObject, UIWindowSceneDelegate, ObservableObject {
 
     var window: UIWindow?
 

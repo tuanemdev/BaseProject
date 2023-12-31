@@ -8,19 +8,19 @@
 import Foundation
 
 protocol APIManagerProtocol {
-    func perform(_ request: APIRequest, authToken: String) async throws -> Data
+    func perform(_ request: some APIRequest, authToken: String) async throws -> Data
     func requestToken() async throws -> Data
     func refreshToken(with token: String) async throws -> Data
 }
 
-class APIManager: APIManagerProtocol {
+final class APIManager: APIManagerProtocol {
     private let urlSession: URLSession
     
     init(urlSession: URLSession = URLSession.shared) {
         self.urlSession = urlSession
     }
     
-    func perform(_ request: APIRequest, authToken: String = "") async throws -> Data {
+    func perform(_ request: some APIRequest, authToken: String = "") async throws -> Data {
         let (data, response) = try await urlSession.data(for: request.createURLRequest(authToken: authToken))
         
         guard let httpResponse = response as? HTTPURLResponse,
