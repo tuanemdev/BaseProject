@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F813714C2B4158110001B1E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813714B2B4158110001B1E0 /* AppDelegate.swift */; };
 		F813714E2B41581B0001B1E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813714D2B41581B0001B1E0 /* SceneDelegate.swift */; };
+		F81371502B4167E60001B1E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F813714F2B4167E60001B1E0 /* Colors.xcassets */; };
 		F8D996832B37FF360062BC9E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D996822B37FF360062BC9E /* HTTPMethod.swift */; };
 		F8D9968D2B3804770062BC9E /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F8D9968C2B3804770062BC9E /* Development.xcconfig */; };
 		F8D9968F2B3804A50062BC9E /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F8D9968E2B3804A30062BC9E /* Staging.xcconfig */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		F813714B2B4158110001B1E0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F813714D2B41581B0001B1E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F813714F2B4167E60001B1E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F8D996822B37FF360062BC9E /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		F8D9968C2B3804770062BC9E /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		F8D9968E2B3804A30062BC9E /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				F8DA6D3B2B37DD7E00591D2B /* Assets.xcassets */,
+				F813714F2B4167E60001B1E0 /* Colors.xcassets */,
 				F8DA6D3D2B37DD7E00591D2B /* Preview Content */,
 			);
 			path = Assets;
@@ -327,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81371502B4167E60001B1E0 /* Colors.xcassets in Resources */,
 				F8D996A32B3827CE0062BC9E /* GoogleService-Info-Production.plist in Resources */,
 				F8DA6D3F2B37DD7E00591D2B /* Preview Assets.xcassets in Resources */,
 				F8D9969F2B3827AE0062BC9E /* GoogleService-Info-Development.plist in Resources */,
@@ -394,6 +398,7 @@
 			baseConfigurationReference = F8D9968E2B3804A30062BC9E /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -458,7 +463,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8D9968E2B3804A30062BC9E /* Staging.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -490,6 +495,7 @@
 			baseConfigurationReference = F8D9968C2B3804770062BC9E /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -555,6 +561,7 @@
 			baseConfigurationReference = F8D996902B3804BC0062BC9E /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -612,7 +619,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8D9968C2B3804770062BC9E /* Development.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -643,7 +650,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8D996902B3804BC0062BC9E /* Production.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
