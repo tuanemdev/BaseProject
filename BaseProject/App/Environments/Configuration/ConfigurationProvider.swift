@@ -20,6 +20,7 @@ enum ConfigurationProvider: EnvironmentConfig {
     /// Các key-value được khai báo trong file config cũng sẽ tự động xuất hiện tại: Project ➝ Targets ➝ Build Settings ➝ User-Defined (cuối cùng)
     /// Có thể thêm key-value trực tiếp bằng cách ấn button + (Add User-Defined Setting) (hàng trên cùng)
     /// Không cần thiết thêm vào Info.plist nếu không cần lấy giá trị khi code. Sử dụng trực tiếp trong Build Settings bằng cú pháp $(KEY)
+    /// Tham khảo danh sách Build Settings Key: https://developer.apple.com/documentation/xcode/build-settings-reference
     private enum Keys {
         static let config       = "CONFIGURATION"
         static let baseURL      = "BASE_URL"
@@ -41,7 +42,7 @@ enum ConfigurationProvider: EnvironmentConfig {
     
     /// Các thông tin trong file Info.plist có thể bị đánh cắp, do đó vì lý do bảo mật, các giá trị mang tính bảo mật không được lưu trong các file xcconfig
     /// Lưu trong code cũng có nguy cơ bị dịch ngược. Để an toàn thì cách tốt nhất là lưu trên server
-    /// Trong trường hợp phải lưu ở client thì nên lưu dưới dạng đã được mã hóa.
+    /// Trong trường hợp phải lưu ở client thì nên lưu dưới dạng đã được mã hóa trong Keychain sau khi tải về từ On-Demand Resource.
     var secretKey: String {
         switch environment {
         case .development:  "APIKey_DEV_Encrypted"
@@ -63,6 +64,11 @@ enum ConfigurationProvider: EnvironmentConfig {
         "STAGING FLAGS"
         #endif
     }
+    
+    // MARK: - Bundle ID
+    /// Mỗi một môi trường nên có 1 BundleID để quản lý như 1 App riêng rẽ
+    /// Mục đích để có thể build được cùng lúc các môi trường khác nhau trên device test
+    /// vả quản lý các môi trường riêng rẽ trên Firebase để có thông tin log chính xác.
     
     // MARK: - Setup Scheme
     /// Để cho thuận tiện thì người ta thường tạo ra nhiều Scheme để thiết lập sẵn với các file config vừa tạo.

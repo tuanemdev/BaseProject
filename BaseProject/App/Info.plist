@@ -2,11 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>GOOGLE_SERVICE_INFO_PLIST</key>
-	<string>$(GOOGLE_SERVICE_INFO_PLIST)</string>
-	<key>CONFIGURATION</key>
-	<string>$(CONFIGURATION)</string>
 	<key>BASE_URL</key>
 	<string>$(BASE_URL)</string>
+	<key>CONFIGURATION</key>
+	<string>$(CONFIGURATION)</string>
+	<key>GOOGLE_SERVICE_INFO_PLIST</key>
+	<string>$(GOOGLE_SERVICE_INFO_PLIST)</string>
 </dict>
 </plist>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F813714C2B4158110001B1E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813714B2B4158110001B1E0 /* AppDelegate.swift */; };
+		F813714E2B41581B0001B1E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813714D2B41581B0001B1E0 /* SceneDelegate.swift */; };
 		F8D996832B37FF360062BC9E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D996822B37FF360062BC9E /* HTTPMethod.swift */; };
 		F8D9968D2B3804770062BC9E /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F8D9968C2B3804770062BC9E /* Development.xcconfig */; };
 		F8D9968F2B3804A50062BC9E /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F8D9968E2B3804A30062BC9E /* Staging.xcconfig */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F813714B2B4158110001B1E0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F813714D2B41581B0001B1E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F8D996822B37FF360062BC9E /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		F8D9968C2B3804770062BC9E /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		F8D9968E2B3804A30062BC9E /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
@@ -71,12 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F813714A2B41576C0001B1E0 /* AppLifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				F813714B2B4158110001B1E0 /* AppDelegate.swift */,
+				F813714D2B41581B0001B1E0 /* SceneDelegate.swift */,
+			);
+			path = AppLifeCycle;
+			sourceTree = "<group>";
+		};
 		F8D9967B2B37FD2D0062BC9E /* App */ = {
 			isa = PBXGroup;
 			children = (
 				F8DA6D372B37DD7D00591D2B /* BaseProjectApp.swift */,
 				F8D996942B3811C70062BC9E /* Info.plist */,
 				F8D996862B3801A40062BC9E /* Environments */,
+				F813714A2B41576C0001B1E0 /* AppLifeCycle */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -359,7 +373,9 @@
 				F8DA6D3A2B37DD7D00591D2B /* ContentView.swift in Sources */,
 				F8D996B42B383A060062BC9E /* AccessTokenManager.swift in Sources */,
 				F8DA6D382B37DD7D00591D2B /* BaseProjectApp.swift in Sources */,
+				F813714E2B41581B0001B1E0 /* SceneDelegate.swift in Sources */,
 				F8D996932B3809550062BC9E /* Configuration.swift in Sources */,
+				F813714C2B4158110001B1E0 /* AppDelegate.swift in Sources */,
 				F8D996B02B383A060062BC9E /* RequestManager.swift in Sources */,
 				F8D996832B37FF360062BC9E /* HTTPMethod.swift in Sources */,
 				F8D996AE2B383A060062BC9E /* APIRequest.swift in Sources */,
@@ -461,7 +477,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuanem.BaseProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuanem.BaseProject.stg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -615,7 +631,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuanem.BaseProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuanem.BaseProject.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -646,7 +662,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuanem.BaseProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuanem.BaseProject.prod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
