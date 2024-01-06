@@ -9,19 +9,16 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        ZStack {
-            Color(.baseBackground)
-                .ignoresSafeArea()
-            
-            VStack {
-                Text("Base SwiftUI Project")
-                    .foregroundStyle(Color.baseTitle)
-                
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
+        NavigationStack {
+            List {
+                NavigationLink(value: "Resource") {
+                    Text("Resource Manager")
+                }
             }
-            .padding()
+            .navigationDestination(for: String.self) { string in
+                ResourcesView()
+            }
+            .navigationTitle("Base Project")
         }
     }
 }
