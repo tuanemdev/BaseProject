@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB3BFC112B4BFB67003F8242 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BB3BFC102B4BFB67003F8242 /* Localizable.xcstrings */; };
+		BB3BFC132B4C0025003F8242 /* LocalizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BFC122B4C0025003F8242 /* LocalizableView.swift */; };
+		BB3BFC152B4C094A003F8242 /* LocalizedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BFC142B4C094A003F8242 /* LocalizedKey.swift */; };
 		F813714C2B4158110001B1E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813714B2B4158110001B1E0 /* AppDelegate.swift */; };
 		F813714E2B41581B0001B1E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813714D2B41581B0001B1E0 /* SceneDelegate.swift */; };
 		F81371502B4167E60001B1E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F813714F2B4167E60001B1E0 /* Colors.xcassets */; };
@@ -37,9 +40,13 @@
 		F8DA6D3A2B37DD7D00591D2B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DA6D392B37DD7D00591D2B /* HomeView.swift */; };
 		F8DA6D3C2B37DD7E00591D2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8DA6D3B2B37DD7E00591D2B /* Assets.xcassets */; };
 		F8DA6D3F2B37DD7E00591D2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8DA6D3E2B37DD7E00591D2B /* Preview Assets.xcassets */; };
+		F8F082772B4CA38600D2C38D /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F8F082762B4CA38600D2C38D /* InfoPlist.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB3BFC102B4BFB67003F8242 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		BB3BFC122B4C0025003F8242 /* LocalizableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableView.swift; sourceTree = "<group>"; };
+		BB3BFC142B4C094A003F8242 /* LocalizedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKey.swift; sourceTree = "<group>"; };
 		F813714B2B4158110001B1E0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F813714D2B41581B0001B1E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F813714F2B4167E60001B1E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -72,6 +79,7 @@
 		F8DA6D392B37DD7D00591D2B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F8DA6D3B2B37DD7E00591D2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8DA6D3E2B37DD7E00591D2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F8F082762B4CA38600D2C38D /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB3BFC0F2B4BFB32003F8242 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				BB3BFC142B4C094A003F8242 /* LocalizedKey.swift */,
+				BB3BFC102B4BFB67003F8242 /* Localizable.xcstrings */,
+				F8F082762B4CA38600D2C38D /* InfoPlist.xcstrings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		F813714A2B41576C0001B1E0 /* AppLifeCycle */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				F855EFFA2B4923CF000C6357 /* ResourcesView.swift */,
+				BB3BFC122B4C0025003F8242 /* LocalizableView.swift */,
 				F855EFFE2B4928FD000C6357 /* Pet.swift */,
 			);
 			path = Resources;
@@ -143,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				F8D996802B37FDEC0062BC9E /* Assets */,
+				BB3BFC0F2B4BFB32003F8242 /* Localizable */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -334,6 +354,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = F8DA6D2B2B37DD7D00591D2B;
 			productRefGroup = F8DA6D352B37DD7D00591D2B /* Products */;
@@ -350,8 +371,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8F082772B4CA38600D2C38D /* InfoPlist.xcstrings in Resources */,
 				F81371502B4167E60001B1E0 /* Colors.xcassets in Resources */,
 				F855F0012B499202000C6357 /* Symbols.xcassets in Resources */,
+				BB3BFC112B4BFB67003F8242 /* Localizable.xcstrings in Resources */,
 				F8D996A32B3827CE0062BC9E /* GoogleService-Info-Production.plist in Resources */,
 				F8DA6D3F2B37DD7E00591D2B /* Preview Assets.xcassets in Resources */,
 				F855EFFD2B492859000C6357 /* Data.xcassets in Resources */,
@@ -395,6 +418,7 @@
 				F855EFFB2B4923CF000C6357 /* ResourcesView.swift in Sources */,
 				F8D996B22B383A060062BC9E /* APIManager.swift in Sources */,
 				F855EFFF2B4928FD000C6357 /* Pet.swift in Sources */,
+				BB3BFC152B4C094A003F8242 /* LocalizedKey.swift in Sources */,
 				F8D996B12B383A060062BC9E /* APIRequestExample.swift in Sources */,
 				F8D996982B3815980062BC9E /* AppEnvironment.swift in Sources */,
 				F8D996A52B3839600062BC9E /* NetworkError.swift in Sources */,
@@ -405,6 +429,7 @@
 				F8D996932B3809550062BC9E /* Configuration.swift in Sources */,
 				F813714C2B4158110001B1E0 /* AppDelegate.swift in Sources */,
 				F8D996B02B383A060062BC9E /* RequestManager.swift in Sources */,
+				BB3BFC132B4C0025003F8242 /* LocalizableView.swift in Sources */,
 				F8D996832B37FF360062BC9E /* HTTPMethod.swift in Sources */,
 				F8D996AE2B383A060062BC9E /* APIRequest.swift in Sources */,
 				F8D996B52B383A060062BC9E /* APIConstants.swift in Sources */,
@@ -471,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -496,6 +521,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BaseProject/App/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "TuanEm Indie Developer © 2023-2024";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -568,7 +594,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -628,7 +654,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -652,6 +678,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BaseProject/App/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "TuanEm Indie Developer © 2023-2024";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -683,6 +710,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BaseProject/App/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "TuanEm Indie Developer © 2023-2024";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -1,0 +1,69 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " fan" : {
+
+    },
+    "%lld spectators are screaming" : {
+
+    },
+    "About me" : {
+
+    },
+    "Audience Booed" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Shut up bastard"
+          }
+        }
+      }
+    },
+    "Base Project" : {
+
+    },
+    "Custom SF Symbol: " : {
+
+    },
+    "Discover String Catalogs" : {
+
+    },
+    "Hello, I'm %@!!!" : {
+
+    },
+    "I am an %@ singer with %lld years of experience" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "I am an %1$@ singer with %2$lld years of experience"
+          }
+        }
+      }
+    },
+    "Language Manager" : {
+
+    },
+    "Programming Languages" : {
+
+    },
+    "Resources Manager" : {
+
+    },
+    "Sing A Song" : {
+      "comment" : "Favorite song",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "A Song I'd Like To Sing %@"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
