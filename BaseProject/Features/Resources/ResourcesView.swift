@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Foundation
 
 struct ResourcesView: View {
     @State private var pet: Pet? = nil
