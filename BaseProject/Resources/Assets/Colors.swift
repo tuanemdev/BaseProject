@@ -7,12 +7,17 @@
 
 import SwiftUI
 
-/// File này sẽ không cần thiếu đối với dự án support > iOS 17 bởi vì Xcode 15 đã mang tới công cụ generation chính thức
+/// File này sẽ không cần thiết đối với dự án dùng Xcode 15, bởi vì Xcode 15 đã mang tới công cụ generation chính thức
 /// với sự ra đời của: ImageResource và ColorResource
+/// Lưu ý ColorResource (tương tự với ImageResource) của iOS > 17 và của iOS thấp hơn là không giống nhau, tạo 1 biến ImageResource và Jump To Definition để thấy.
+/// Đây cũng là cách tính năng này hỗ trợ các iOS đời thấp hơn
+/// + íOS > 17: đến từ DeveloperToolsSupport.ColorResource
+/// + iOS thấp: đến từ GeneratedAssetSymbols.ColorResource. Nếu lướt lên đầu file này sẽ thấy các resource được khai báo dưới dạng static let trong extension của nó
 /// Link đọc tham khảo thêm: https://sarunw.com/posts/swift-symbols-for-asset-catalog/
-/// Nội dung file này nói về Color, Image làm hoàn toàn tương tự
 
-/// Vậy nếu với các dự án support dưới iOS 17 thì sao
+/// Nội dung file này nói về Color, Image làm hoàn toàn tương tự
+/// Thực tế thì Color hay Image sẽ không cần file constant nữa. Nhưng cách này có thể áp dụng cho các mục đích khác. Ví dụ như LocalizedKe,...
+
 /// Có 3 cách tiếp cận chính:
 
 /// Cách 1: Sử dụng thư viện hỗ trợ generation

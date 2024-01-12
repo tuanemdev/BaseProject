@@ -9,7 +9,7 @@
  Framework là một điều tuyệt vời, bởi vì thế giới code là rất rộng lớn, không ai học hết được
  Việc sử dụng framework giúp:
  + code nhanh hơn (sử dụng code đã được đóng gói sẵn)
- + code gọn hơn (tất cả các code liên quan được đóng gói gọn gàng trong 1 framework)
+ + code gọn hơn (tất cả các code liên quan được đóng gói gọn gàng trong 1 framework) (Đây cũng là cách để module hóa project của bạn, giúp tách biệt các thành phần trong dự án)
  + code chạy ít lỗi hơn (được viết bởi những người tài giỏi hơn bạn, cộng đồng đóng góp giúp cải thiện từ hiệu suất đến việc test kỹ càng)
  
  ======
