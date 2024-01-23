@@ -28,7 +28,7 @@ enum ConfigurationProvider: EnvironmentConfig {
     
     /// Tên của config đang sử dụng: Project ➝ Info ➝ Configurations
     var config: String {
-        try! Configuration.value(for: Keys.config)
+        try! InfoPlistConfig.value(for: Keys.config)
     }
     
     var environment: AppEnvironment {
@@ -37,7 +37,7 @@ enum ConfigurationProvider: EnvironmentConfig {
     
     /// Key-Value custom được điền trong các file .xcconfig
     var baseURL: String {
-        try! Configuration.value(for: Keys.baseURL)
+        try! InfoPlistConfig.value(for: Keys.baseURL)
     }
     
     /// Các thông tin trong file Info.plist có thể bị đánh cắp, do đó vì lý do bảo mật, các giá trị mang tính bảo mật không được lưu trong các file xcconfig

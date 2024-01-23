@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Configuration {
+enum InfoPlistConfig {
     enum Error: Swift.Error {
         case missingKey, invalidValue
     }

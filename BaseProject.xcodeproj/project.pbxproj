@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB2893502B5FB9960054E2F3 /* BaseButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28934F2B5FB9960054E2F3 /* BaseButtonStyle.swift */; };
+		BB2893532B5FC56D0054E2F3 /* StyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2893522B5FC56D0054E2F3 /* StyleView.swift */; };
+		BB2893562B5FCC380054E2F3 /* BaseToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2893552B5FCC380054E2F3 /* BaseToggleStyle.swift */; };
 		BB3BFC112B4BFB67003F8242 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BB3BFC102B4BFB67003F8242 /* Localizable.xcstrings */; };
 		BB3BFC132B4C0025003F8242 /* LocalizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BFC122B4C0025003F8242 /* LocalizableView.swift */; };
 		BB3BFC152B4C094A003F8242 /* LocalizedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BFC142B4C094A003F8242 /* LocalizedKey.swift */; };
@@ -25,7 +28,7 @@
 		F8D9968D2B3804770062BC9E /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F8D9968C2B3804770062BC9E /* Development.xcconfig */; };
 		F8D9968F2B3804A50062BC9E /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F8D9968E2B3804A30062BC9E /* Staging.xcconfig */; };
 		F8D996912B3804BC0062BC9E /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F8D996902B3804BC0062BC9E /* Production.xcconfig */; };
-		F8D996932B3809550062BC9E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D996922B3809550062BC9E /* Configuration.swift */; };
+		F8D996932B3809550062BC9E /* InfoPlistConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D996922B3809550062BC9E /* InfoPlistConfig.swift */; };
 		F8D996982B3815980062BC9E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D996962B3815980062BC9E /* AppEnvironment.swift */; };
 		F8D996992B3815980062BC9E /* ConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D996972B3815980062BC9E /* ConfigurationProvider.swift */; };
 		F8D9969F2B3827AE0062BC9E /* GoogleService-Info-Development.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8D9969E2B3827AE0062BC9E /* GoogleService-Info-Development.plist */; };
@@ -48,6 +51,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB28934F2B5FB9960054E2F3 /* BaseButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButtonStyle.swift; sourceTree = "<group>"; };
+		BB2893522B5FC56D0054E2F3 /* StyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleView.swift; sourceTree = "<group>"; };
+		BB2893552B5FCC380054E2F3 /* BaseToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseToggleStyle.swift; sourceTree = "<group>"; };
 		BB3BFC102B4BFB67003F8242 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		BB3BFC122B4C0025003F8242 /* LocalizableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableView.swift; sourceTree = "<group>"; };
 		BB3BFC142B4C094A003F8242 /* LocalizedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKey.swift; sourceTree = "<group>"; };
@@ -66,7 +72,7 @@
 		F8D9968C2B3804770062BC9E /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		F8D9968E2B3804A30062BC9E /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		F8D996902B3804BC0062BC9E /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		F8D996922B3809550062BC9E /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		F8D996922B3809550062BC9E /* InfoPlistConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistConfig.swift; sourceTree = "<group>"; };
 		F8D996942B3811C70062BC9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8D996962B3815980062BC9E /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		F8D996972B3815980062BC9E /* ConfigurationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationProvider.swift; sourceTree = "<group>"; };
@@ -101,6 +107,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB28934D2B5FB8FA0054E2F3 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				BB28934E2B5FB9240054E2F3 /* ButtonStyle */,
+				BB2893542B5FCBEA0054E2F3 /* ToggleStyle */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		BB28934E2B5FB9240054E2F3 /* ButtonStyle */ = {
+			isa = PBXGroup;
+			children = (
+				BB28934F2B5FB9960054E2F3 /* BaseButtonStyle.swift */,
+			);
+			path = ButtonStyle;
+			sourceTree = "<group>";
+		};
+		BB2893512B5FC5410054E2F3 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				BB2893522B5FC56D0054E2F3 /* StyleView.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		BB2893542B5FCBEA0054E2F3 /* ToggleStyle */ = {
+			isa = PBXGroup;
+			children = (
+				BB2893552B5FCC380054E2F3 /* BaseToggleStyle.swift */,
+			);
+			path = ToggleStyle;
+			sourceTree = "<group>";
+		};
 		BB3BFC0F2B4BFB32003F8242 /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +203,7 @@
 			children = (
 				F8D9967D2B37FD4B0062BC9E /* Home */,
 				F855EFF92B49238B000C6357 /* Resources */,
+				BB2893512B5FC5410054E2F3 /* Style */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -180,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				F8D996812B37FE8B0062BC9E /* Networking */,
+				BB28934D2B5FB8FA0054E2F3 /* Styles */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -260,7 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				F8D996962B3815980062BC9E /* AppEnvironment.swift */,
-				F8D996922B3809550062BC9E /* Configuration.swift */,
+				F8D996922B3809550062BC9E /* InfoPlistConfig.swift */,
 				F8D996972B3815980062BC9E /* ConfigurationProvider.swift */,
 			);
 			path = Configuration;
@@ -454,13 +495,16 @@
 				F8D996A52B3839600062BC9E /* NetworkError.swift in Sources */,
 				F8DA6D3A2B37DD7D00591D2B /* HomeView.swift in Sources */,
 				F8D996B42B383A060062BC9E /* AccessTokenManager.swift in Sources */,
+				BB2893532B5FC56D0054E2F3 /* StyleView.swift in Sources */,
 				F8DA6D382B37DD7D00591D2B /* BaseProjectApp.swift in Sources */,
 				F813714E2B41581B0001B1E0 /* SceneDelegate.swift in Sources */,
-				F8D996932B3809550062BC9E /* Configuration.swift in Sources */,
+				F8D996932B3809550062BC9E /* InfoPlistConfig.swift in Sources */,
 				F813714C2B4158110001B1E0 /* AppDelegate.swift in Sources */,
+				BB2893562B5FCC380054E2F3 /* BaseToggleStyle.swift in Sources */,
 				F8D996B02B383A060062BC9E /* RequestManager.swift in Sources */,
 				BB3BFC132B4C0025003F8242 /* LocalizableView.swift in Sources */,
 				BB70C3F52B5E2B4F000780E5 /* Architecture.swift in Sources */,
+				BB2893502B5FB9960054E2F3 /* BaseButtonStyle.swift in Sources */,
 				F8D996832B37FF360062BC9E /* HTTPMethod.swift in Sources */,
 				F8D996AE2B383A060062BC9E /* APIRequest.swift in Sources */,
 				F8D996B52B383A060062BC9E /* APIConstants.swift in Sources */,
