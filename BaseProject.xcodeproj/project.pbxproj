@@ -24,10 +24,11 @@
 		F855EFFD2B492859000C6357 /* Data.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F855EFFC2B492859000C6357 /* Data.xcassets */; };
 		F855EFFF2B4928FD000C6357 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F855EFFE2B4928FD000C6357 /* Pet.swift */; };
 		F855F0012B499202000C6357 /* Symbols.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F855F0002B499202000C6357 /* Symbols.xcassets */; };
+		F8D37E492B60FA8A00248B7E /* SocialFeedTagLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D37E482B60FA8A00248B7E /* SocialFeedTagLabelStyle.swift */; };
+		F8D37E4C2B60FF1B00248B7E /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D37E4B2B60FF1B00248B7E /* FlowLayout.swift */; };
+		F8D37E4F2B610EE800248B7E /* BaseTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D37E4E2B610EE800248B7E /* BaseTextFieldStyle.swift */; };
+		F8D37E512B61458000248B7E /* WrappedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D37E502B61458000248B7E /* WrappedTextFieldStyle.swift */; };
 		F8D996832B37FF360062BC9E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D996822B37FF360062BC9E /* HTTPMethod.swift */; };
-		F8D9968D2B3804770062BC9E /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F8D9968C2B3804770062BC9E /* Development.xcconfig */; };
-		F8D9968F2B3804A50062BC9E /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F8D9968E2B3804A30062BC9E /* Staging.xcconfig */; };
-		F8D996912B3804BC0062BC9E /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F8D996902B3804BC0062BC9E /* Production.xcconfig */; };
 		F8D996932B3809550062BC9E /* InfoPlistConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D996922B3809550062BC9E /* InfoPlistConfig.swift */; };
 		F8D996982B3815980062BC9E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D996962B3815980062BC9E /* AppEnvironment.swift */; };
 		F8D996992B3815980062BC9E /* ConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D996972B3815980062BC9E /* ConfigurationProvider.swift */; };
@@ -68,6 +69,10 @@
 		F855EFFC2B492859000C6357 /* Data.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Data.xcassets; sourceTree = "<group>"; };
 		F855EFFE2B4928FD000C6357 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		F855F0002B499202000C6357 /* Symbols.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Symbols.xcassets; sourceTree = "<group>"; };
+		F8D37E482B60FA8A00248B7E /* SocialFeedTagLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFeedTagLabelStyle.swift; sourceTree = "<group>"; };
+		F8D37E4B2B60FF1B00248B7E /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
+		F8D37E4E2B610EE800248B7E /* BaseTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextFieldStyle.swift; sourceTree = "<group>"; };
+		F8D37E502B61458000248B7E /* WrappedTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedTextFieldStyle.swift; sourceTree = "<group>"; };
 		F8D996822B37FF360062BC9E /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		F8D9968C2B3804770062BC9E /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		F8D9968E2B3804A30062BC9E /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
@@ -112,6 +117,8 @@
 			children = (
 				BB28934E2B5FB9240054E2F3 /* ButtonStyle */,
 				BB2893542B5FCBEA0054E2F3 /* ToggleStyle */,
+				F8D37E472B60F9EB00248B7E /* LabelStyle */,
+				F8D37E4D2B610EB000248B7E /* TextFieldStyle */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -186,6 +193,31 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		F8D37E472B60F9EB00248B7E /* LabelStyle */ = {
+			isa = PBXGroup;
+			children = (
+				F8D37E482B60FA8A00248B7E /* SocialFeedTagLabelStyle.swift */,
+			);
+			path = LabelStyle;
+			sourceTree = "<group>";
+		};
+		F8D37E4A2B60FEED00248B7E /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				F8D37E4B2B60FF1B00248B7E /* FlowLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		F8D37E4D2B610EB000248B7E /* TextFieldStyle */ = {
+			isa = PBXGroup;
+			children = (
+				F8D37E502B61458000248B7E /* WrappedTextFieldStyle.swift */,
+				F8D37E4E2B610EE800248B7E /* BaseTextFieldStyle.swift */,
+			);
+			path = TextFieldStyle;
+			sourceTree = "<group>";
+		};
 		F8D9967B2B37FD2D0062BC9E /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +253,7 @@
 			children = (
 				F8D996812B37FE8B0062BC9E /* Networking */,
 				BB28934D2B5FB8FA0054E2F3 /* Styles */,
+				F8D37E4A2B60FEED00248B7E /* Layout */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -409,7 +442,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					F8DA6D332B37DD7D00591D2B = {
 						CreatedOnToolsVersion = 15.1;
@@ -449,11 +482,8 @@
 				F8DA6D3F2B37DD7E00591D2B /* Preview Assets.xcassets in Resources */,
 				F855EFFD2B492859000C6357 /* Data.xcassets in Resources */,
 				F8D9969F2B3827AE0062BC9E /* GoogleService-Info-Development.plist in Resources */,
-				F8D9968D2B3804770062BC9E /* Development.xcconfig in Resources */,
-				F8D9968F2B3804A50062BC9E /* Staging.xcconfig in Resources */,
 				F8DA6D3C2B37DD7E00591D2B /* Assets.xcassets in Resources */,
 				F8D996A12B3827B70062BC9E /* GoogleService-Info-Staging.plist in Resources */,
-				F8D996912B3804BC0062BC9E /* Production.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,8 +515,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D37E4F2B610EE800248B7E /* BaseTextFieldStyle.swift in Sources */,
+				F8D37E492B60FA8A00248B7E /* SocialFeedTagLabelStyle.swift in Sources */,
 				F855EFFB2B4923CF000C6357 /* ResourcesView.swift in Sources */,
 				BBEF9B3E2B4CEC6F00E3E518 /* Colors.swift in Sources */,
+				F8D37E4C2B60FF1B00248B7E /* FlowLayout.swift in Sources */,
 				F8D996B22B383A060062BC9E /* APIManager.swift in Sources */,
 				F855EFFF2B4928FD000C6357 /* Pet.swift in Sources */,
 				BB3BFC152B4C094A003F8242 /* LocalizedKey.swift in Sources */,
@@ -501,6 +534,7 @@
 				F8D996932B3809550062BC9E /* InfoPlistConfig.swift in Sources */,
 				F813714C2B4158110001B1E0 /* AppDelegate.swift in Sources */,
 				BB2893562B5FCC380054E2F3 /* BaseToggleStyle.swift in Sources */,
+				F8D37E512B61458000248B7E /* WrappedTextFieldStyle.swift in Sources */,
 				F8D996B02B383A060062BC9E /* RequestManager.swift in Sources */,
 				BB3BFC132B4C0025003F8242 /* LocalizableView.swift in Sources */,
 				BB70C3F52B5E2B4F000780E5 /* Architecture.swift in Sources */,
@@ -525,6 +559,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -623,6 +658,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -689,6 +725,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

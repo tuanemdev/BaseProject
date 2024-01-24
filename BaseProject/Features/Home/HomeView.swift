@@ -17,13 +17,18 @@ struct HomeView: View {
                 NavigationLink(value: "Localizable") {
                     Text("Language Manager")
                 }
+                NavigationLink(value: "Modifier") {
+                    Text("View Modifier")
+                }
             }
             .navigationDestination(for: String.self) { string in
                 switch string {
                 case "Resource":
                     ResourcesView()
-                default:
+                case "Localizable":
                     LocalizableView()
+                default:
+                    StyleView()
                 }
             }
             .navigationTitle("Base Project")
