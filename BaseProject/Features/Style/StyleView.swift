@@ -7,10 +7,17 @@
 
 import SwiftUI
 
+/// Style hoạt động giống như environment, nên không nhất thiết mỗi lần dùng Components đều phải áp dụng style cho nó
+/// mà nó sẽ áp dụng cho cả hệ thống View Hierarchy (hệ thống phân cấp view)
+/// (thử cắt .toggleStyle(.baseStyle) rồi áp dụng vào HomeView() ở Root App để thấy kết quả không thay đổi)
 struct StyleView: View {
+    /// Toggle
     @State private var isCoder: Bool = true
+    /// TextField
     @State private var textContent: String = ""
     @State private var password: String = ""
+    /// Custom
+    @State private var state: TripleState = .med
     
     var body: some View {
         ScrollView {
@@ -48,7 +55,12 @@ struct StyleView: View {
             }
             .textFieldStyle(.baseStyle)
             .padding(.horizontal)
+            
+            /// Custom
+            TripleToggle(tripleState: $state, label: Text("TripleToggle"))
+                .tripleToggleStyle(KnobTripleToggleStyle(dotColor: .red))
         }
+        .navigationTitle("Style & View Modifier")
     }
 }
 

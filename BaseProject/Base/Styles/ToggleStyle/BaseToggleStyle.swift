@@ -30,11 +30,8 @@ struct BaseToggleStyle: ToggleStyle {
                         .offset(x: configuration.isOn ? 10 : -10)
                 }
                 .frame(width: 50, height: 32)
-                .onTapGesture {
-                    withAnimation(.spring()) {
-                        configuration.isOn.toggle()
-                    }
-                }
+                .animation(.spring(), value: configuration.isOn)
+                .onTapGesture { configuration.isOn.toggle() }
         }
     }
 }
