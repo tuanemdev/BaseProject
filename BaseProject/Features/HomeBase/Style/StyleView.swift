@@ -18,15 +18,17 @@ struct StyleView: View {
     @State private var password: String = ""
     /// Custom
     @State private var state: TripleState = .med
+    /// Router
+    @Environment(Router.self) private var router
     
     var body: some View {
         ScrollView {
             VStack {
                 /// Button
                 Button(role: .cancel) {
-                    print("Hello Kitty")
+                    router.navigate(to: .metaShader)
                 } label: {
-                    Label("Custom Button", systemImage: "gamecontroller.fill")
+                    Label("Metal Shader", systemImage: "gamecontroller.fill")
                 }
                 .buttonStyle(.baseStyle)
                 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var activeTabItem: TabItem = .home
+    @State private var router: Router = .init()
     @State private var tabItemPosition: CGPoint = .zero
     @Namespace private var animation
     
@@ -17,26 +17,27 @@ struct HomeView: View {
     }
     
     var body: some View {
-        TabView(selection: $activeTabItem) {
-            NavigationStack {
+        TabView(selection: $router.activeTabItem) {
+            NavigationStack(path: $router.homePath) {
                 HomeBaseView()
+                    .navigationDestination(for: HomeDestination.self, destination: view(for:))
                     .commonNavigationBar()
             }
             .tag(TabItem.home)
             
-            NavigationStack {
+            NavigationStack(path: $router.servicesPath) {
                 ServicesView()
                     .commonNavigationBar()
             }
             .tag(TabItem.services)
             
-            NavigationStack {
+            NavigationStack(path: $router.partnersPath) {
                 PartnersView()
                     .commonNavigationBar()
             }
             .tag(TabItem.partners)
             
-            NavigationStack {
+            NavigationStack(path: $router.activityPath) {
                 ActivityView()
                     .commonNavigationBar()
             }
@@ -48,6 +49,7 @@ struct HomeView: View {
             customTabbar()
         }
         .ignoresSafeArea(.keyboard)
+        .environment(router)
     }
     
     @ViewBuilder
@@ -59,7 +61,7 @@ struct HomeView: View {
                     inactiveTint: inactiveTint,
                     tabItem: tabItem,
                     animation: animation,
-                    activeTabItem: $activeTabItem,
+                    activeTabItem: $router.activeTabItem,
                     position: $tabItemPosition
                 )
             }
@@ -73,7 +75,7 @@ struct HomeView: View {
                 .shadow(color: activeTint.opacity(0.5), radius: 5, x: 0, y: -5)
                 .padding(.top, 25)
         }
-        .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7), value: activeTabItem)
+        .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7), value: router.activeTabItem)
         .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7), value: tabItemPosition)
     }
     

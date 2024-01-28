@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
+import Observation
 
+@Observable
 final class SceneDelegate: NSObject, UIWindowSceneDelegate, ObservableObject {
 
     var window: UIWindow?

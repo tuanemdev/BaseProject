@@ -10,27 +10,17 @@ import SwiftUI
 struct HomeBaseView: View {
     var body: some View {
         List {
-            NavigationLink(value: "Resource") {
+            NavigationLink(value: HomeDestination.resources) {
                 Text("Resources Manager")
             }
-            NavigationLink(value: "Localizable") {
+            NavigationLink(value: HomeDestination.language) {
                 Text("Language Manager")
             }
-            NavigationLink(value: "Modifier") {
+            NavigationLink(value: HomeDestination.modifier) {
                 Text("View Modifier")
             }
         }
         .background(Color.baseBackground)
-        .navigationDestination(for: String.self) { string in
-            switch string {
-            case "Resource":
-                ResourcesView()
-            case "Localizable":
-                LocalizableView()
-            default:
-                StyleView()
-            }
-        }
         .navigationTitle("Base Project")
     }
 }

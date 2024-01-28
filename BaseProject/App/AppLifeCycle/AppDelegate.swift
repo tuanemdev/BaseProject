@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import Observation
 
 /// https://developer.apple.com/documentation/swiftui/uiapplicationdelegateadaptor
-/// Khi AppDelegate conform ObservableObject thì SwiftUI sẽ tự đưa nó vào Environment
-/// Khi sử dụng chỉ đơn giản khai báo @EnvironmentObject private var appDelegate: AppDelegate (tương tự với SceneDelegate)
-/// Nếu chỉ cần support từ iOS 17 thì thay thế ObservableObject bằng Observable macros mới hơn.
-final class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
+/// Khi AppDelegate conform @Observable thì SwiftUI sẽ tự đưa nó vào Environment
+/// Khi sử dụng chỉ đơn giản khai báo @Environment(AppDelegate.self) private var appDelegate (tương tự với SceneDelegate)
+/// Đây là dành cho iOS 17 trở lên vì Observation không được backDeploy. Đời cũ thì thay thế Observable bằng ObservableObject, hoàn toàn tương tự.
+@Observable
+final class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         return true
     }
