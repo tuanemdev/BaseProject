@@ -93,7 +93,8 @@ struct HomeView: View {
         appearance.backgroundImageContentMode = .scaleToFill
         appearance.shadowColor = .gray
         appearance.titleTextAttributes = [
-            .foregroundColor: UIColor.baseTitle
+            .foregroundColor: UIColor.baseTitle,
+            .font: UIFontMetrics.default.scaledFont(for: UIFont(name: Fonts.sixtyfourOverlapping, size: 14)!),
         ]
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance

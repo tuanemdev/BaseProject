@@ -21,6 +21,8 @@
 		BBEF9B3E2B4CEC6F00E3E518 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEF9B3D2B4CEC6F00E3E518 /* Colors.swift */; };
 		BBEF9B422B4D06D700E3E518 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEF9B412B4D06D700E3E518 /* Library.swift */; };
 		F81141762B66349500715C4E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81141752B66349500715C4E /* NavigationBar.swift */; };
+		F811417B2B66538600715C4E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F811417A2B66538600715C4E /* Font.swift */; };
+		F811417D2B66552200715C4E /* Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F811417C2B66552200715C4E /* Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf */; };
 		F813714C2B4158110001B1E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813714B2B4158110001B1E0 /* AppDelegate.swift */; };
 		F813714E2B41581B0001B1E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813714D2B41581B0001B1E0 /* SceneDelegate.swift */; };
 		F81371502B4167E60001B1E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F813714F2B4167E60001B1E0 /* Colors.xcassets */; };
@@ -78,6 +80,8 @@
 		BBEF9B3D2B4CEC6F00E3E518 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BBEF9B412B4D06D700E3E518 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		F81141752B66349500715C4E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		F811417A2B66538600715C4E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		F811417C2B66552200715C4E /* Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf"; sourceTree = "<group>"; };
 		F813714B2B4158110001B1E0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F813714D2B41581B0001B1E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F813714F2B4167E60001B1E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -223,6 +227,15 @@
 			path = CustomNavigationBar;
 			sourceTree = "<group>";
 		};
+		F81141772B66530900715C4E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F811417A2B66538600715C4E /* Font.swift */,
+				F811417C2B66552200715C4E /* Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		F813714A2B41576C0001B1E0 /* AppLifeCycle */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +376,7 @@
 			children = (
 				F8D996802B37FDEC0062BC9E /* Assets */,
 				BB3BFC0F2B4BFB32003F8242 /* Localizable */,
+				F81141772B66530900715C4E /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -574,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB70C3F92B5E7518000780E5 /* TCA.png in Resources */,
+				F811417D2B66552200715C4E /* Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf in Resources */,
 				F8F082772B4CA38600D2C38D /* InfoPlist.xcstrings in Resources */,
 				F81371502B4167E60001B1E0 /* Colors.xcassets in Resources */,
 				F855F0012B499202000C6357 /* Symbols.xcassets in Resources */,
@@ -627,6 +642,7 @@
 				BB3BFC152B4C094A003F8242 /* LocalizedKey.swift in Sources */,
 				F8D996B12B383A060062BC9E /* APIRequestExample.swift in Sources */,
 				F8D996982B3815980062BC9E /* AppEnvironment.swift in Sources */,
+				F811417B2B66538600715C4E /* Font.swift in Sources */,
 				F8CAD3D62B65836B00D8CA0B /* TabItemView.swift in Sources */,
 				F8D996A52B3839600062BC9E /* NetworkError.swift in Sources */,
 				F8DA6D3A2B37DD7D00591D2B /* HomeView.swift in Sources */,

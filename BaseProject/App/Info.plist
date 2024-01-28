@@ -8,5 +8,9 @@
 	<string>$(CONFIGURATION)</string>
 	<key>GOOGLE_SERVICE_INFO_PLIST</key>
 	<string>$(GOOGLE_SERVICE_INFO_PLIST)</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf</string>
+	</array>
 </dict>
 </plist>
