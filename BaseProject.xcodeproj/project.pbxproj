@@ -24,6 +24,12 @@
 		F811417B2B66538600715C4E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F811417A2B66538600715C4E /* Font.swift */; };
 		F811417D2B66552200715C4E /* Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F811417C2B66552200715C4E /* Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf */; };
 		F811417F2B66A30F00715C4E /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F811417E2B66A30F00715C4E /* TitleView.swift */; };
+		F81141832B66AB8D00715C4E /* KeyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81141822B66AB8D00715C4E /* KeyWindow.swift */; };
+		F811418A2B66AD2600715C4E /* ConditionalViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81141872B66AD2600715C4E /* ConditionalViewModifier.swift */; };
+		F811418B2B66AD2600715C4E /* MaskContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81141882B66AD2600715C4E /* MaskContent.swift */; };
+		F811418C2B66AD2600715C4E /* PlatformViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81141892B66AD2600715C4E /* PlatformViewModifier.swift */; };
+		F811418E2B66AD3300715C4E /* BindingMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = F811418D2B66AD3300715C4E /* BindingMaxLength.swift */; };
+		F81141902B66AD4000715C4E /* MinMaxSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F811418F2B66AD4000715C4E /* MinMaxSize.swift */; };
 		F813714C2B4158110001B1E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813714B2B4158110001B1E0 /* AppDelegate.swift */; };
 		F813714E2B41581B0001B1E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813714D2B41581B0001B1E0 /* SceneDelegate.swift */; };
 		F81371502B4167E60001B1E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F813714F2B4167E60001B1E0 /* Colors.xcassets */; };
@@ -84,6 +90,12 @@
 		F811417A2B66538600715C4E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		F811417C2B66552200715C4E /* Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf"; sourceTree = "<group>"; };
 		F811417E2B66A30F00715C4E /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		F81141822B66AB8D00715C4E /* KeyWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyWindow.swift; sourceTree = "<group>"; };
+		F81141872B66AD2600715C4E /* ConditionalViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalViewModifier.swift; sourceTree = "<group>"; };
+		F81141882B66AD2600715C4E /* MaskContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskContent.swift; sourceTree = "<group>"; };
+		F81141892B66AD2600715C4E /* PlatformViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformViewModifier.swift; sourceTree = "<group>"; };
+		F811418D2B66AD3300715C4E /* BindingMaxLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingMaxLength.swift; sourceTree = "<group>"; };
+		F811418F2B66AD4000715C4E /* MinMaxSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinMaxSize.swift; sourceTree = "<group>"; };
 		F813714B2B4158110001B1E0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F813714D2B41581B0001B1E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F813714F2B4167E60001B1E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -237,6 +249,51 @@
 				F811417C2B66552200715C4E /* Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F81141802B66AAD300715C4E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F81141812B66AB1C00715C4E /* UIApplication */,
+				F81141842B66ACAA00715C4E /* View */,
+				F81141852B66ACC600715C4E /* PropertyWrapper */,
+				F81141862B66ACE000715C4E /* GeometryProxy */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F81141812B66AB1C00715C4E /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				F81141822B66AB8D00715C4E /* KeyWindow.swift */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		F81141842B66ACAA00715C4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F81141872B66AD2600715C4E /* ConditionalViewModifier.swift */,
+				F81141882B66AD2600715C4E /* MaskContent.swift */,
+				F81141892B66AD2600715C4E /* PlatformViewModifier.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F81141852B66ACC600715C4E /* PropertyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				F811418D2B66AD3300715C4E /* BindingMaxLength.swift */,
+			);
+			path = PropertyWrapper;
+			sourceTree = "<group>";
+		};
+		F81141862B66ACE000715C4E /* GeometryProxy */ = {
+			isa = PBXGroup;
+			children = (
+				F811418F2B66AD4000715C4E /* MinMaxSize.swift */,
+			);
+			path = GeometryProxy;
 			sourceTree = "<group>";
 		};
 		F813714A2B41576C0001B1E0 /* AppLifeCycle */ = {
@@ -517,6 +574,7 @@
 				F8D9967C2B37FD3B0062BC9E /* Features */,
 				F8D9967E2B37FD6A0062BC9E /* Base */,
 				F8D9967F2B37FD830062BC9E /* Resources */,
+				F81141802B66AAD300715C4E /* Extension */,
 				BBEF9B3F2B4CF10C00E3E518 /* Libraries */,
 			);
 			path = BaseProject;
@@ -650,8 +708,12 @@
 				F811417F2B66A30F00715C4E /* TitleView.swift in Sources */,
 				F8D996A52B3839600062BC9E /* NetworkError.swift in Sources */,
 				F8DA6D3A2B37DD7D00591D2B /* HomeView.swift in Sources */,
+				F81141832B66AB8D00715C4E /* KeyWindow.swift in Sources */,
 				F8D996B42B383A060062BC9E /* AccessTokenManager.swift in Sources */,
+				F811418E2B66AD3300715C4E /* BindingMaxLength.swift in Sources */,
+				F811418B2B66AD2600715C4E /* MaskContent.swift in Sources */,
 				BB2893532B5FC56D0054E2F3 /* StyleView.swift in Sources */,
+				F811418A2B66AD2600715C4E /* ConditionalViewModifier.swift in Sources */,
 				F8DA6D382B37DD7D00591D2B /* BaseProjectApp.swift in Sources */,
 				F813714E2B41581B0001B1E0 /* SceneDelegate.swift in Sources */,
 				F8D996932B3809550062BC9E /* InfoPlistConfig.swift in Sources */,
@@ -667,11 +729,13 @@
 				F8CAD3E22B6587F800D8CA0B /* HomeBaseView.swift in Sources */,
 				F8D996832B37FF360062BC9E /* HTTPMethod.swift in Sources */,
 				F8CAD3D22B65816B00D8CA0B /* TabItemPosition.swift in Sources */,
+				F81141902B66AD4000715C4E /* MinMaxSize.swift in Sources */,
 				F8D996AE2B383A060062BC9E /* APIRequest.swift in Sources */,
 				BBE1C71B2B6202E000395C95 /* BasePrimitiveButtonStyle.swift in Sources */,
 				F8CAD3D32B65816B00D8CA0B /* TabItem.swift in Sources */,
 				F8D996B52B383A060062BC9E /* APIConstants.swift in Sources */,
 				F8D996B32B383A060062BC9E /* DataParser.swift in Sources */,
+				F811418C2B66AD2600715C4E /* PlatformViewModifier.swift in Sources */,
 				F8D996AF2B383A060062BC9E /* APIToken.swift in Sources */,
 				F8CAD3DC2B65877000D8CA0B /* ServicesView.swift in Sources */,
 				F8D996992B3815980062BC9E /* ConfigurationProvider.swift in Sources */,
