@@ -20,6 +20,7 @@
 		BBE1C7202B625F6000395C95 /* LibraryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE1C71F2B625F6000395C95 /* LibraryContent.swift */; };
 		BBEF9B3E2B4CEC6F00E3E518 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEF9B3D2B4CEC6F00E3E518 /* Colors.swift */; };
 		BBEF9B422B4D06D700E3E518 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEF9B412B4D06D700E3E518 /* Library.swift */; };
+		F81141762B66349500715C4E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81141752B66349500715C4E /* NavigationBar.swift */; };
 		F813714C2B4158110001B1E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813714B2B4158110001B1E0 /* AppDelegate.swift */; };
 		F813714E2B41581B0001B1E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813714D2B41581B0001B1E0 /* SceneDelegate.swift */; };
 		F81371502B4167E60001B1E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F813714F2B4167E60001B1E0 /* Colors.xcassets */; };
@@ -76,6 +77,7 @@
 		BBE1C71F2B625F6000395C95 /* LibraryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryContent.swift; sourceTree = "<group>"; };
 		BBEF9B3D2B4CEC6F00E3E518 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BBEF9B412B4D06D700E3E518 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		F81141752B66349500715C4E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		F813714B2B4158110001B1E0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F813714D2B41581B0001B1E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F813714F2B4167E60001B1E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -213,6 +215,14 @@
 			path = Libraries;
 			sourceTree = "<group>";
 		};
+		F81141742B6632F200715C4E /* CustomNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				F81141752B66349500715C4E /* NavigationBar.swift */,
+			);
+			path = CustomNavigationBar;
+			sourceTree = "<group>";
+		};
 		F813714A2B41576C0001B1E0 /* AppLifeCycle */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +341,7 @@
 			children = (
 				F8DA6D392B37DD7D00591D2B /* HomeView.swift */,
 				F8CAD3CC2B65813300D8CA0B /* CustomTabbar */,
+				F81141742B6632F200715C4E /* CustomNavigationBar */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -629,6 +640,7 @@
 				BB2893562B5FCC380054E2F3 /* BaseToggleStyle.swift in Sources */,
 				F8D37E512B61458000248B7E /* WrappedTextFieldStyle.swift in Sources */,
 				F8D996B02B383A060062BC9E /* RequestManager.swift in Sources */,
+				F81141762B66349500715C4E /* NavigationBar.swift in Sources */,
 				BB3BFC132B4C0025003F8242 /* LocalizableView.swift in Sources */,
 				BB70C3F52B5E2B4F000780E5 /* Architecture.swift in Sources */,
 				BB2893502B5FB9960054E2F3 /* BaseButtonStyle.swift in Sources */,

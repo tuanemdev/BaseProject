@@ -12,14 +12,23 @@ struct HomeView: View {
     @State private var tabItemPosition: CGPoint = .zero
     @Namespace private var animation
     
-    /// Fix Bug SwiftUI in iOS 16, TabBar sẽ ngẫu nhiên hiển thị khi chuyển giữa các tab
-    /// Nếu dùng hàm này thì không cần sử dụng .toolbar(.hidden, for: .tabBar)
-    init() { UITabBar.appearance().isHidden = true }
+    init() {
+        setupGlobalUIAppearance()
+    }
     
     var body: some View {
         TabView(selection: $activeTabItem) {
             NavigationStack {
                 HomeBaseView()
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBar { navi in
+                        navi.navigationBar.layer.masksToBounds = false
+                        navi.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
+                        navi.navigationBar.layer.shadowOpacity = 3.0
+                        navi.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 4.0)
+                        navi.navigationBar.layer.shadowRadius = 4
+                        navi.navigationBar.topItem?.backButtonDisplayMode = .minimal
+                    }
             }
             .tag(TabItem.home)
             
@@ -71,6 +80,24 @@ struct HomeView: View {
         }
         .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7), value: activeTabItem)
         .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7), value: tabItemPosition)
+    }
+    
+    private func setupGlobalUIAppearance() {
+        /// Fix Bug SwiftUI in iOS 16, TabBar sẽ ngẫu nhiên hiển thị khi chuyển giữa các tab
+        /// Nếu dùng hàm này thì không cần sử dụng .toolbar(.hidden, for: .tabBar)
+        UITabBar.appearance().isHidden = true
+        /// NavigationBar
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundImage = UIImage(resource: .naviBackground)
+        appearance.backgroundImageContentMode = .scaleToFill
+        appearance.shadowColor = .gray
+        appearance.titleTextAttributes = [
+            .foregroundColor: UIColor.baseTitle
+        ]
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
 }
 

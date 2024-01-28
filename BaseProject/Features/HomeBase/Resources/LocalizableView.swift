@@ -43,7 +43,6 @@ struct LocalizableView: View {
             Text(verbatim: "Không có gì quý hơn độc lập, tự do") /// verbatim: Nguyên văn
         }
         .navigationTitle(LocalizedKey.localizedTutorialTitle)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
