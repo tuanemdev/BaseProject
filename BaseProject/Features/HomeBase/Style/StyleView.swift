@@ -21,44 +21,47 @@ struct StyleView: View {
     
     var body: some View {
         ScrollView {
-            /// Button
-            Button(role: .cancel) {
-                print("Hello Kitty")
-            } label: {
-                Label("Custom Button", systemImage: "gamecontroller.fill")
-            }
-            .buttonStyle(.baseStyle)
-            
-            /// Toggle
-            Toggle(isOn: $isCoder) {
-                Text("DEV")
-            }
-            .toggleStyle(.baseStyle)
-            
-            /// Label
-            FlowLayout(spacing: 10) {
-                ForEach(StyleView.tags, id: \.title) { tag in
-                    Label(tag.title, systemImage: tag.icon)
-                        .labelStyle(.socialFeedTag)
+            VStack {
+                /// Button
+                Button(role: .cancel) {
+                    print("Hello Kitty")
+                } label: {
+                    Label("Custom Button", systemImage: "gamecontroller.fill")
                 }
+                .buttonStyle(.baseStyle)
+                
+                /// Toggle
+                Toggle(isOn: $isCoder) {
+                    Text("DEV")
+                }
+                .toggleStyle(.baseStyle)
+                
+                /// Label
+                FlowLayout(spacing: 10) {
+                    ForEach(StyleView.tags, id: \.title) { tag in
+                        Label(tag.title, systemImage: tag.icon)
+                            .labelStyle(.socialFeedTag)
+                    }
+                }
+                
+                /// TextField
+                TextField(text: $textContent, prompt: Text("Search...")) {
+                    Label("Google", systemImage: "magnifyingglass")
+                }
+                .textFieldStyle(.baseStyle)
+                .padding()
+                
+                SecureField(text: $password, prompt: Text("Enter password")) {
+                    Label("Pass Code", systemImage: "lock.shield")
+                }
+                .textFieldStyle(.baseStyle)
+                .padding(.horizontal)
+                
+                /// Custom
+                TripleToggle(tripleState: $state, label: Text("TripleToggle"))
+                    .tripleToggleStyle(KnobTripleToggleStyle(dotColor: .red))
             }
-            
-            /// TextField
-            TextField(text: $textContent, prompt: Text("Search...")) {
-                Label("Google", systemImage: "magnifyingglass")
-            }
-            .textFieldStyle(.baseStyle)
-            .padding()
-            
-            SecureField(text: $password, prompt: Text("Enter password")) {
-                Label("Pass Code", systemImage: "lock.shield")
-            }
-            .textFieldStyle(.baseStyle)
-            .padding(.horizontal)
-            
-            /// Custom
-            TripleToggle(tripleState: $state, label: Text("TripleToggle"))
-                .tripleToggleStyle(KnobTripleToggleStyle(dotColor: .red))
+            .paddingForNavigationBarAndTabbar()
         }
         .navigationTitleView(title: "View Modifier", subTitle: "0987654321", icon: "phone.fill")
     }

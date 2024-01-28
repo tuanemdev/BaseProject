@@ -52,6 +52,7 @@ struct ResourcesView: View {
                     }
                 }
             }
+            .paddingForNavigationBarAndTabbar()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .background(Color.baseBackground)
