@@ -22,6 +22,7 @@ struct TitleView: View {
             Label(subTitle, systemImage: icon)
                 .labelStyle(.titleAndIcon)
                 .font(.footnote)
+                .foregroundStyle(Color.secondary.gradient)
         }
         .offset(y: 8)
     }

@@ -20,6 +20,7 @@ struct HomeBaseView: View {
                 Text("View Modifier")
             }
         }
+        .background(Color.baseBackground)
         .navigationDestination(for: String.self) { string in
             switch string {
             case "Resource":

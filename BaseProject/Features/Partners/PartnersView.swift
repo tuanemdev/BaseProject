@@ -10,6 +10,8 @@ import SwiftUI
 struct PartnersView: View {
     var body: some View {
         Text("Partners Content")
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.baseBackground)
             .navigationTitle("Partners")
     }
 }

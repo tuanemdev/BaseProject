@@ -63,7 +63,30 @@ struct StyleView: View {
             }
             .paddingForNavigationBarAndTabbar()
         }
+        .background(Color.baseBackground)
         .navigationTitleView(title: "View Modifier", subTitle: "0987654321", icon: "phone.fill")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    print("Coding")
+                } label: {
+                    Image(systemName: "ellipsis.curlybraces")
+                        .symbolRenderingMode(.palette)
+                        .symbolEffect(.variableColor, value: textContent)
+                        .foregroundStyle(Color.brown.gradient)
+                }
+            }
+            
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    print("Notification")
+                } label: {
+                    Image(systemName: "bell.badge.waveform.fill")
+                        .symbolEffect(.bounce, options: .speed(4).repeat(2), value: isCoder)
+                        .foregroundStyle(Color.pink.gradient)
+                }
+            }
+        }
     }
 }
 

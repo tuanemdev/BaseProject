@@ -42,6 +42,8 @@ struct LocalizableView: View {
             Text(aStringVariable)
             Text(verbatim: "Không có gì quý hơn độc lập, tự do") /// verbatim: Nguyên văn
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.baseBackground)
         .navigationTitle(LocalizedKey.localizedTutorialTitle)
     }
 }
