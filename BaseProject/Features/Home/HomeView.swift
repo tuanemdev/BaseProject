@@ -20,30 +20,25 @@ struct HomeView: View {
         TabView(selection: $activeTabItem) {
             NavigationStack {
                 HomeBaseView()
-                    .navigationBarTitleDisplayMode(.inline)
-                    .navigationBar { navi in
-                        navi.navigationBar.layer.masksToBounds = false
-                        navi.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
-                        navi.navigationBar.layer.shadowOpacity = 3.0
-                        navi.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 4.0)
-                        navi.navigationBar.layer.shadowRadius = 4
-                        navi.navigationBar.topItem?.backButtonDisplayMode = .minimal
-                    }
+                    .commonNavigationBar()
             }
             .tag(TabItem.home)
             
             NavigationStack {
                 ServicesView()
+                    .commonNavigationBar()
             }
             .tag(TabItem.services)
             
             NavigationStack {
                 PartnersView()
+                    .commonNavigationBar()
             }
             .tag(TabItem.partners)
             
             NavigationStack {
                 ActivityView()
+                    .commonNavigationBar()
             }
             .tag(TabItem.activity)
         }
@@ -86,12 +81,27 @@ struct HomeView: View {
         /// Fix Bug SwiftUI in iOS 16, TabBar sẽ ngẫu nhiên hiển thị khi chuyển giữa các tab
         /// Nếu dùng hàm này thì không cần sử dụng .toolbar(.hidden, for: .tabBar)
         UITabBar.appearance().isHidden = true
+        
         /// NavigationBar
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
+        /// transitionMaskImage nếu set đúng sẽ không giống với backIndicatorImage, tác dụng của nó là những phần không trong suốt sẽ nhìn thấy text khi chuyển màn
+        /// https://sarunw.com/posts/what-is-backindicatortransitionmaskimage/
+        let backIndicatorImage = UIImage(systemName: "arrowtriangle.backward.fill")?.withTintColor(.baseTitle, renderingMode: .alwaysOriginal)
+        appearance.setBackIndicatorImage(backIndicatorImage, transitionMaskImage: backIndicatorImage)
+        /// Chưa tìm được cách ẩn back button title, cho dù đã set backButtonDisplayMode = .minimal
+        /// Dùng thủ thuật bằng cách chuyển foregroundColor về clear và rời vị trí sang bên trái 40 point
+        let backButtonAppearance = UIBarButtonItemAppearance()
+        backButtonAppearance.normal.titleTextAttributes = [
+            .foregroundColor : UIColor.clear,
+            .font : UIFont.systemFont(ofSize: 18) /// Đổi size luôn của cả backIndicatorImage vì nó là SF Symbol
+        ]
+        backButtonAppearance.normal.titlePositionAdjustment = UIOffset(horizontal: -40, vertical: 0)
+        appearance.backButtonAppearance = backButtonAppearance
         appearance.backgroundImage = UIImage(resource: .naviBackground)
         appearance.backgroundImageContentMode = .scaleToFill
         appearance.shadowColor = .gray
+        appearance.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -8)
         appearance.titleTextAttributes = [
             .foregroundColor: UIColor.baseTitle,
             .font: UIFontMetrics.default.scaledFont(for: UIFont(name: Fonts.sixtyfourOverlapping, size: 14)!),
@@ -99,6 +109,7 @@ struct HomeView: View {
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().compactScrollEdgeAppearance = appearance
     }
 }
 

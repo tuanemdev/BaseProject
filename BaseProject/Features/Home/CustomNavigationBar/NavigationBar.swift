@@ -9,6 +9,19 @@ import SwiftUI
 
 // MARK: - Extension
 extension View {
+    func commonNavigationBar() -> some View {
+        self
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBar { navi in
+                navi.navigationBar.layer.masksToBounds = false
+                navi.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
+                navi.navigationBar.layer.shadowOpacity = 3.0
+                navi.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 4.0)
+                navi.navigationBar.layer.shadowRadius = 4
+                navi.navigationBar.topItem?.backButtonDisplayMode = .minimal
+            }
+    }
+    
     func navigationBar(_ config: @escaping (UINavigationController) -> Void) -> some View {
         modifier(NavigationBarViewModifier(config: config))
     }

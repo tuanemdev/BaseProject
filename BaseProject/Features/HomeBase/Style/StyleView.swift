@@ -60,7 +60,7 @@ struct StyleView: View {
             TripleToggle(tripleState: $state, label: Text("TripleToggle"))
                 .tripleToggleStyle(KnobTripleToggleStyle(dotColor: .red))
         }
-        .navigationTitle("Style & View Modifier")
+        .navigationTitleView(title: "View Modifier", subTitle: "0987654321", icon: "phone.fill")
     }
 }
 

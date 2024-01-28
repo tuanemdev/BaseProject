@@ -18,15 +18,14 @@ struct PositionKey: PreferenceKey {
 extension View {
     @ViewBuilder
     func viewPosition(completion: @escaping (CGRect) -> Void) -> some View {
-        self
-            .overlay {
-                GeometryReader { proxy in
-                    let rect = proxy.frame(in: .global)
-                    
-                    Color.clear
-                        .preference(key: PositionKey.self,value: rect)
-                        .onPreferenceChange(PositionKey.self, perform: completion)
-                }
+        overlay {
+            GeometryReader { proxy in
+                let rect = proxy.frame(in: .global)
+                
+                Color.clear
+                    .preference(key: PositionKey.self,value: rect)
+                    .onPreferenceChange(PositionKey.self, perform: completion)
             }
+        }
     }
 }

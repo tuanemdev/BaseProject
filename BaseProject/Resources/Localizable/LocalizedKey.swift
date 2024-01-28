@@ -15,7 +15,7 @@ import SwiftUI
 enum LocalizedKey {
     /// iOS 13
     /// Thuộc về SwiftUI
-    static let localizedTutorialTitle: LocalizedStringKey                           = "Discover String Catalogs"
+    static let localizedTutorialTitle: LocalizedStringKey                           = "String Catalogs"
     static func greeting(personName: String) -> LocalizedStringKey                  { "Hello, I'm \(personName)!!!" }
     /// iOS 16
     /// Thuộc về Foundation
