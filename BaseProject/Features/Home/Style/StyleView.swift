@@ -9,7 +9,7 @@ import SwiftUI
 
 /// Style hoạt động giống như environment, nên không nhất thiết mỗi lần dùng Components đều phải áp dụng style cho nó
 /// mà nó sẽ áp dụng cho cả hệ thống View Hierarchy (hệ thống phân cấp view)
-/// (thử cắt .toggleStyle(.baseStyle) rồi áp dụng vào HomeView() ở Root App để thấy kết quả không thay đổi)
+/// (thử cắt .toggleStyle(.baseStyle) rồi áp dụng vào RootView() ở Root App để thấy kết quả không thay đổi)
 struct StyleView: View {
     /// Toggle
     @State private var isCoder: Bool = true
