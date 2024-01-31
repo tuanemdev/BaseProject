@@ -62,4 +62,5 @@ struct CirclePattern: View {
 
 #Preview("Circle Pattern") {
     CirclePattern()
+        .environment(Router.init())
 }

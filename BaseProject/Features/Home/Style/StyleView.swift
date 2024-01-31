@@ -94,6 +94,7 @@ struct StyleView: View {
 
 #Preview {
     StyleView()
+        .environment(Router.init())
 }
 
 extension StyleView {

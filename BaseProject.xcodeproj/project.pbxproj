@@ -15,6 +15,8 @@
 		BB3BFC152B4C094A003F8242 /* LocalizedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BFC142B4C094A003F8242 /* LocalizedKey.swift */; };
 		BB70C3F52B5E2B4F000780E5 /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB70C3F42B5E2B4F000780E5 /* Architecture.swift */; };
 		BB70C3F92B5E7518000780E5 /* TCA.png in Resources */ = {isa = PBXBuildFile; fileRef = BB70C3F82B5E7518000780E5 /* TCA.png */; };
+		BB9D1AA52B6A220000ABA3B8 /* HomeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D1AA42B6A220000ABA3B8 /* HomeDataStore.swift */; };
+		BB9D1AA82B6A351400ABA3B8 /* MVArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D1AA72B6A351400ABA3B8 /* MVArchitecture.swift */; };
 		BBE1C71B2B6202E000395C95 /* BasePrimitiveButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE1C71A2B6202E000395C95 /* BasePrimitiveButtonStyle.swift */; };
 		BBE1C71E2B62149C00395C95 /* TripleToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE1C71D2B62149C00395C95 /* TripleToggle.swift */; };
 		BBE1C7202B625F6000395C95 /* LibraryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE1C71F2B625F6000395C95 /* LibraryContent.swift */; };
@@ -86,6 +88,8 @@
 		BB3BFC142B4C094A003F8242 /* LocalizedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKey.swift; sourceTree = "<group>"; };
 		BB70C3F42B5E2B4F000780E5 /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
 		BB70C3F82B5E7518000780E5 /* TCA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TCA.png; sourceTree = "<group>"; };
+		BB9D1AA42B6A220000ABA3B8 /* HomeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataStore.swift; sourceTree = "<group>"; };
+		BB9D1AA72B6A351400ABA3B8 /* MVArchitecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVArchitecture.swift; sourceTree = "<group>"; };
 		BBE1C71A2B6202E000395C95 /* BasePrimitiveButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePrimitiveButtonStyle.swift; sourceTree = "<group>"; };
 		BBE1C71D2B62149C00395C95 /* TripleToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripleToggle.swift; sourceTree = "<group>"; };
 		BBE1C71F2B625F6000395C95 /* LibraryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryContent.swift; sourceTree = "<group>"; };
@@ -217,6 +221,14 @@
 				BB70C3F82B5E7518000780E5 /* TCA.png */,
 			);
 			path = Architecture;
+			sourceTree = "<group>";
+		};
+		BB9D1AA62B6A34CE00ABA3B8 /* MV-Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				BB9D1AA72B6A351400ABA3B8 /* MVArchitecture.swift */,
+			);
+			path = "MV-Architecture";
 			sourceTree = "<group>";
 		};
 		BBE1C71C2B62143500395C95 /* Components */ = {
@@ -357,10 +369,12 @@
 		F8CAD3D72B6586A700D8CA0B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BB9D1AA42B6A220000ABA3B8 /* HomeDataStore.swift */,
 				F8CAD3E12B6587F800D8CA0B /* HomeView.swift */,
 				F855EFF92B49238B000C6357 /* Resources */,
 				BB2893512B5FC5410054E2F3 /* Style */,
 				F81141982B66D08B00715C4E /* MetalShader */,
+				BB9D1AA62B6A34CE00ABA3B8 /* MV-Architecture */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -745,6 +759,7 @@
 				F81141832B66AB8D00715C4E /* KeyWindow.swift in Sources */,
 				F8D996B42B383A060062BC9E /* AccessTokenManager.swift in Sources */,
 				F811418E2B66AD3300715C4E /* BindingMaxLength.swift in Sources */,
+				BB9D1AA82B6A351400ABA3B8 /* MVArchitecture.swift in Sources */,
 				F811418B2B66AD2600715C4E /* MaskContent.swift in Sources */,
 				BB2893532B5FC56D0054E2F3 /* StyleView.swift in Sources */,
 				F811418A2B66AD2600715C4E /* ConditionalViewModifier.swift in Sources */,
@@ -764,6 +779,7 @@
 				F8D996832B37FF360062BC9E /* HTTPMethod.swift in Sources */,
 				F8CAD3D22B65816B00D8CA0B /* TabItemPosition.swift in Sources */,
 				F81141902B66AD4000715C4E /* MinMaxSize.swift in Sources */,
+				BB9D1AA52B6A220000ABA3B8 /* HomeDataStore.swift in Sources */,
 				F8D996AE2B383A060062BC9E /* APIRequest.swift in Sources */,
 				BBE1C71B2B6202E000395C95 /* BasePrimitiveButtonStyle.swift in Sources */,
 				F8CAD3D32B65816B00D8CA0B /* TabItem.swift in Sources */,
