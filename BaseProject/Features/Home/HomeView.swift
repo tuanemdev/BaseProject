@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var homeDataStore: HomeDataStore = .init()
     
     var body: some View {
         List {
@@ -21,9 +20,11 @@ struct HomeView: View {
             NavigationLink(value: HomeDestination.modifier) {
                 Text("View Modifier")
             }
+            NavigationLink(value: HomeDestination.mvArchitecture) {
+                Text("MV Architecture")
+            }
         }
         .background(Color.baseBackground)
         .navigationTitle("Base Project")
-        .environment(homeDataStore) /// Chia sẻ data vào hệ thống phân cấp View
     }
 }

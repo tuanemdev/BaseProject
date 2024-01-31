@@ -57,6 +57,9 @@
     "Hello, I'm %@!!!" : {
 
     },
+    "Hello, MV Architecture!" : {
+
+    },
     "I am an %@ singer with %lld years of experience" : {
       "localizations" : {
         "en" : {
@@ -73,7 +76,19 @@
     "Language Manager" : {
 
     },
+    "Local State" : {
+
+    },
+    "love the way you lie" : {
+
+    },
     "Metal Shader" : {
+
+    },
+    "MV Architecture" : {
+
+    },
+    "natural way to write your code" : {
 
     },
     "Partners" : {
@@ -103,6 +118,9 @@
     "Services Content" : {
 
     },
+    "Share State" : {
+
+    },
     "Sing A Song" : {
       "comment" : "Favorite song",
       "extractionState" : "extracted_with_value",
@@ -128,6 +146,9 @@
 
     },
     "Wave" : {
+
+    },
+    "Xcode and friends" : {
 
     }
   },

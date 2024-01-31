@@ -7,6 +7,7 @@
 
 import Foundation
 
+#warning("Phần Networking này tham khảo từ Ray Wenderlich, cần bổ sung handle việc refresh Token, hay sử dụng phương thức xác thực khác như APIKey và xử lý các kiểu data trả về khác nhau (dù hiếm khi nào khác JSON)")
 protocol RequestManagerProtocol {
     func perform<T: Decodable>(_ request: some APIRequest, allowRetry: Bool) async throws -> T
 }

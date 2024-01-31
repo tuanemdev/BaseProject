@@ -30,6 +30,7 @@ struct TitleView: View {
 
 // MARK: - Extension
 extension View {
+    /// Cách hoạt động của func này về bản chất khác với navigationTitle gốc của SwiftUI, chúng sử dụng Preferences. sẽ tìm các modifier trong tương lai nếu có thời gian
     func navigationTitleView(title: LocalizedStringKey, subTitle: LocalizedStringKey, icon: String) -> some View {
         toolbar {
             ToolbarItem(placement: .principal) {

@@ -59,9 +59,10 @@ struct MVArchitecture: View {
                 TextField("Share State", text: $homeDataStore.productName)
                 TextField("Local State", text: $otherState)
             }
+            .paddingForNavigationBarAndTabbar()
         }
         .background(.baseBackground)
-        .navigationTitleView(title: "MV Architecture", subTitle: "code your way", icon: "shippingbox.fill")
+        .navigationTitleView(title: "MV Architecture", subTitle: "love the way you lie", icon: "bolt.heart.fill")
     }
     
     @ViewBuilder /// Tìm hiểu về result builder để biết các nó hoạt động

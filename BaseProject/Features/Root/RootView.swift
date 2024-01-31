@@ -11,6 +11,8 @@ struct RootView: View {
     @State private var router: Router = .init()
     @State private var tabItemPosition: CGPoint = .zero
     @Namespace private var animation
+    /// HomeDataStore
+    @State private var homeDataStore: HomeDataStore = .init()
     
     init() {
         setupGlobalUIAppearance()
@@ -23,6 +25,7 @@ struct RootView: View {
                     .navigationDestination(for: HomeDestination.self, destination: view(for:))
                     .commonNavigationBar()
             }
+            .environment(homeDataStore) /// Chia sẻ data vào hệ thống phân cấp View của Home NavigationStack
             .tag(TabItem.home)
             
             NavigationStack(path: $router.servicesPath) {
