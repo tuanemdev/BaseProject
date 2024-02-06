@@ -61,3 +61,10 @@ enum EnumConstant {
 /// ➦ Chọn 1 trong 2 tuỳ sở thích của bạn. Quan điểm cá nhân thích static let constant hơn vì nhìn cú pháp thuận mắt hơn
 /// 2 cách này hoàn toàn giống nhau: https://forums.swift.org/t/static-computed-property-vs-static-let-constant/20968
 /// (Lưu ý: computed property ở đây là computed property đơn giản như ví dụ phía trên, nếu nó phức tạp hơn thì phải tuân thủ theo nguyên tắc của functional programming)
+
+// MARK: - Development Assets
+/**
+ Là phần Asset sẽ không được đóng gói trong bundle khi Archive, nó được sử dụng để Preview hoặc cung cấp data test trong quá trình development.
+ Chỉ định folder nào dùng với mục đích Preview trong General ➝ Development Assets hoặc trong Build Settings ➝ Deployment ➝ Development Assets
+ (Preview Content là folder mặc định đã được tạo sẵn khi tạo project mới bằng Xcode 11 trở lên)
+ */

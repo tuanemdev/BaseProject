@@ -109,7 +109,7 @@ struct RootView: View {
         appearance.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -8)
         appearance.titleTextAttributes = [
             .foregroundColor: UIColor.baseTitle,
-            .font: UIFontMetrics.default.scaledFont(for: UIFont(name: Fonts.sixtyfourOverlapping, size: 14)!),
+            .font: UIFont.navigationTitle
         ]
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance

@@ -23,6 +23,12 @@ extension View {
 }
 
 // MARK: - Constant
-enum Fonts {
-    static let sixtyfourOverlapping = "SixtyfourOverlapping-Regular"
+/// Font - SwiftUI
+extension Font {
+    static let navigationTitle: Font = .custom("SixtyfourOverlapping-Regular", size: 14, relativeTo: .title)
+}
+
+/// UIFont - UIKit
+extension UIFont {
+    static let navigationTitle: UIFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for: UIFont(name: "SixtyfourOverlapping-Regular", size: 14)!)
 }

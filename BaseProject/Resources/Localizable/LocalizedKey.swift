@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// String Catalog có thể sử dụng ở mọi dự án không phân biệt version hỗ trợ tối thiểu là bao nhiêu
-/// Bởi vì behind the scenes nó sẽ được convert ngược về Strings File và Stringsdict File khi build App (Đã được đánh dấu là Legacy - Di sản cần được bảo tổn nhưng không nên sử dụng nữa)
+/// Bởi vì behind the scenes nó sẽ được convert ngược về Strings File và Stringsdict File khi build App (Đã được đánh dấu là Legacy - Di sản cần được bảo tổn, vì vậy không nên sử dụng nữa)
 /// Đối với dự án cũ đang dùng Strings File thì cũng có thể dễ dàng Migrate bằng cách ấn chuột phải vào file này chọn Migrate to String Catalog...
 /// và bật Use Compiler to Extract Swift Strings trong Build Settings - Localization (Đối với dự án mới tạo bằng Xcode 15 trở lên mặc định hỗ trợ)
 /// Link phim: https://developer.apple.com/videos/play/wwdc2023/10155/
@@ -19,6 +19,7 @@ enum LocalizedKey {
     static func greeting(personName: String) -> LocalizedStringKey                  { "Hello, I'm \(personName)!!!" }
     /// iOS 16
     /// Thuộc về Foundation
+    /// LocalizedStringResource hỗ trợ các hàm khởi tạo chi tiết hơn LocalizedStringKey, full tính năng giống như NSLocalizedString trước đây
     static let aboutMe: LocalizedStringResource                                     = "About me"
     static func introduce(platform: String, exp: Int) -> LocalizedStringResource    { "I am an \(platform) singer with \(exp) years of experience" }
     
