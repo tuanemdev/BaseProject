@@ -23,6 +23,9 @@ struct HomeView: View {
             NavigationLink(value: HomeDestination.mvArchitecture) {
                 Text("MV Architecture")
             }
+            NavigationLink(value: HomeDestination.logging) {
+                Text("OSLog")
+            }
         }
         .background(Color.baseBackground)
         .navigationTitle("Base Project")

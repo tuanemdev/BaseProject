@@ -19,6 +19,7 @@ enum HomeDestination: Hashable {
     case modifier
     case metaShader
     case mvArchitecture
+    case logging
 }
 
 // MARK: - Destination
@@ -36,6 +37,8 @@ extension View {
             CirclePattern()
         case .mvArchitecture:
             MVArchitecture()
+        case .logging:
+            LoggingView()
         }
     }
 }
