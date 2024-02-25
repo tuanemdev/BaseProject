@@ -31,7 +31,7 @@ struct LoggingView: View {
     private let logFileURL = URL.documentsDirectory.appending(path: "LogStore.txt", directoryHint: .isDirectory)
     
     var body: some View {
-        ScrollView(.vertical) {
+        ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 Button("Test Log Function") {
                     logAction()
@@ -42,7 +42,16 @@ struct LoggingView: View {
                 ShareLink(item: logFileURL) {
                     Text("Share Log File")
                 }
-                Text(entries.joined(separator: "\n"))
+                
+                if entries.isEmpty {
+                    ContentUnavailableView(
+                        "No Logs",
+                        systemImage: "list.bullet.rectangle.portrait",
+                        description: Text("Try 'Test Log Function'and re-enter this View")
+                    )
+                } else {
+                    Text(entries.joined(separator: "\n"))
+                }
             }
             .buttonStyle(.baseStyle)
             .paddingForNavigationBarAndTabbar()
@@ -60,8 +69,8 @@ struct LoggingView: View {
          debug và trace tương đương với nhau
          chỉ được lưu vào memory
          */
-        logger.debug("Debug Level: \(someThingInfo, privacy: .public)")
-        logger.trace("Debug Level: \(someThingInfo)")
+        logger.debug("debug funtion: \(someThingInfo, privacy: .public)")
+        logger.trace("trace funtion: \(someThingInfo)")
         
         /**
          Default log level
@@ -69,14 +78,14 @@ struct LoggingView: View {
          Default log level cùng cấp với Debug log level
          khác nhau ở chỗ Default log level được lưu vào cả memory và disk
          */
-        logger.notice("Default Level")
+        logger.notice("notice funtion")
         
         /**
          Info log level
          
          chỉ được lưu vào memory (nếu sử dụng log command line tool thì cũng sẽ được lưu vào disk)
          */
-        logger.info("Info Level")
+        logger.info("info funtion")
         
         /**
          Error log level
@@ -84,8 +93,8 @@ struct LoggingView: View {
          error và warning tương đương với nhau
          được lưu vào cả memory và disk
          */
-        logger.error("Error Level")
-        logger.warning("Error Level")
+        logger.error("error funtion")
+        logger.warning("warning funtion")
         
         /**
          Fault log level
@@ -93,8 +102,8 @@ struct LoggingView: View {
          fault và critical tương đương với nhau
          được lưu vào cả memory và disk
          */
-        logger.fault("Fault Level")
-        logger.critical("Fault Level")
+        logger.fault("fault funtion")
+        logger.critical("critical funtion")
         
         /**
          TÍNH BẢO MẬT
@@ -104,7 +113,7 @@ struct LoggingView: View {
          Để hiển thị các thông tin như nội dung của someThingInfo phía trên ta cần cung cấp privacy level cho nó
          Ngoài ra thì có thể có một số lựa chọn định dạng khác cho nó trong message - chi tiết: OSLogInterpolation
          */
-        logger.trace("Debug Level: \(someThingInfo, format: .fixed, align: .right(columns: 10), privacy: .private(mask: .hash))")
+        logger.trace("trace funtion: \(someThingInfo, format: .fixed, align: .right(columns: 10), privacy: .private(mask: .hash))")
     }
     
     /// Lấy thông tin đã được lưu trong LogStore
