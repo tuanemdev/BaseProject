@@ -120,9 +120,11 @@ struct LoggingView: View {
          TÍNH BẢO MẬT
          Do thông tin log có thể nhạy cảm và để đảm bảo an toàn thì chỉ có StaticString là được hiển thị
          các thông tin khác sẽ hiển thị <private> theo mặc định
+         Tính năng này chỉ hoạt động với device thật VÀ khi nó đang không gán với trình gỡ lỗi (debugger)
          (StaticString: chuỗi cố định không thay đổi, không có tham số trong chuỗi)
          Để hiển thị các thông tin như nội dung của someThingInfo phía trên ta cần cung cấp privacy level cho nó
          Ngoài ra thì có thể có một số lựa chọn định dạng khác cho nó trong message - chi tiết: OSLogInterpolation
+         Có thể đọc tham khảo link sau: href: https://www.avanderlee.com/debugging/oslog-unified-logging/
          */
         logger.trace("trace funtion: \(someThingInfo, format: .fixed, align: .right(columns: 10), privacy: .private(mask: .hash))")
     }
