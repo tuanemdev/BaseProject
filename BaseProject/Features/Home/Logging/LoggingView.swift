@@ -10,6 +10,7 @@ import OSLog
 
 /// https://developer.apple.com/documentation/os/logger
 struct LoggingView: View {
+    @Binding var isPresented: Bool
     /**
      Khởi tạo logger cần subsystem và category. Được sử dụng cho mục đích tìm kiếm về sau.
      - subsystem thì lời khuyên nên đặt chính là bundleID
@@ -54,9 +55,19 @@ struct LoggingView: View {
                 }
             }
             .buttonStyle(.baseStyle)
-            .paddingForNavigationBarAndTabbar()
+            .frame(maxWidth: .infinity)
         }
-        .navigationTitleView(title: "OSLog", subTitle: "Explore Logging in Swift", icon: "note.text")
+        .background(Color.baseBackground)
+        .overlay(alignment: .topLeading) {
+            Button {
+                isPresented = false
+            } label: {
+                Image(systemName: "x.circle.fill")
+                    .symbolRenderingMode(.hierarchical)
+                    .font(.title2)
+                    .padding(.leading, 15)
+            }
+        }
         .task {
             await export()
         }
@@ -149,5 +160,5 @@ struct LoggingView: View {
 }
 
 #Preview {
-    LoggingView()
+    LoggingView(isPresented: .constant(true))
 }

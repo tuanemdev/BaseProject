@@ -48,10 +48,13 @@
     "DEV" : {
 
     },
+    "DEV - STAG - PROD" : {
+
+    },
     "Enter password" : {
 
     },
-    "Explore Logging in Swift" : {
+    "Environments Manager" : {
 
     },
     "Google" : {
@@ -95,9 +98,6 @@
 
     },
     "No Logs" : {
-
-    },
-    "OSLog" : {
 
     },
     "Partners" : {

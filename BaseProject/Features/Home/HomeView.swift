@@ -11,6 +11,9 @@ struct HomeView: View {
     
     var body: some View {
         List {
+            NavigationLink(value: HomeDestination.environments) {
+                Text("Environments Manager")
+            }
             NavigationLink(value: HomeDestination.resources) {
                 Text("Resources Manager")
             }
@@ -22,9 +25,6 @@ struct HomeView: View {
             }
             NavigationLink(value: HomeDestination.mvArchitecture) {
                 Text("MV Architecture")
-            }
-            NavigationLink(value: HomeDestination.logging) {
-                Text("OSLog")
             }
         }
         .background(Color.baseBackground)

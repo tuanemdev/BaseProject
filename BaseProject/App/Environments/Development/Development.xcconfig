@@ -8,6 +8,6 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-APP_ICON = AppIconDev
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev
 BASE_URL = dev.tuanem.com
 GOOGLE_SERVICE_INFO_PLIST = App/Environments/Development/GoogleService-Info-Development.plist

@@ -7,19 +7,11 @@
 
 import Foundation
 
-protocol EnvironmentConfig {
-    var environment: AppEnvironment { get }
-    var baseURL: String { get }
-    var secretKey: String { get }
-}
-
-enum ConfigurationProvider: EnvironmentConfig {
-    case `default`
+enum ConfigurationProvider {
     
     /// Tạo một enum để không hard-code
-    /// Các key-value được khai báo trong file config cũng sẽ tự động xuất hiện tại: Project ➝ Targets ➝ Build Settings ➝ User-Defined (cuối cùng)
+    /// Các custom key-value được khai báo trong file config cũng sẽ tự động xuất hiện tại: Project ➝ Targets ➝ Build Settings ➝ User-Defined (cuối cùng)
     /// Có thể thêm key-value trực tiếp bằng cách ấn button + (Add User-Defined Setting) (hàng trên cùng)
-    /// Không cần thiết thêm vào Info.plist nếu không cần lấy giá trị khi code. Sử dụng trực tiếp trong Build Settings bằng cú pháp $(KEY) (ví dụ như key APP_ICON)
     /// Tham khảo danh sách Build Settings Key: https://developer.apple.com/documentation/xcode/build-settings-reference
     private enum Keys {
         static let config       = "CONFIGURATION"
@@ -27,23 +19,24 @@ enum ConfigurationProvider: EnvironmentConfig {
     }
     
     /// Tên của config đang sử dụng: Project ➝ Info ➝ Configurations
-    var config: String {
+    static var config: String {
         try! InfoPlistConfig.value(for: Keys.config)
     }
     
-    var environment: AppEnvironment {
+    static var environment: AppEnvironment {
         AppEnvironment(rawValue: config.lowercased())!
     }
     
     /// Key-Value custom được điền trong các file .xcconfig
-    var baseURL: String {
+    static var baseURL: String {
         try! InfoPlistConfig.value(for: Keys.baseURL)
     }
     
-    /// Các thông tin trong file Info.plist có thể bị đánh cắp, do đó vì lý do bảo mật, các giá trị mang tính bảo mật không được lưu trong các file xcconfig
+    /// Các thông tin trong file Info.plist (hay các file được đóng gói trong app bundle nói chung) có thể bị đánh cắp,
+    /// do đó vì lý do bảo mật, các giá trị mang tính bảo mật không được lưu trong các file xcconfig
     /// Lưu trong code cũng có nguy cơ bị dịch ngược. Để an toàn thì cách tốt nhất là lưu trên server
     /// Trong trường hợp phải lưu ở client thì nên lưu dưới dạng đã được mã hóa trong Keychain sau khi tải về từ On-Demand Resource.
-    var secretKey: String {
+    static var secretKey: String {
         switch environment {
         case .development:  "APIKey_DEV_Encrypted"
         case .staging:      "APIKey_ST_Encrypted"

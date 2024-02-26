@@ -14,12 +14,12 @@ import SwiftUI
 #warning("Tìm cách viết router tốt hơn cho vấn đề bên trên")
 // MARK: - Value
 enum HomeDestination: Hashable {
+    case environments
     case resources
     case language
     case modifier
     case metaShader
     case mvArchitecture
-    case logging
 }
 
 // MARK: - Destination
@@ -27,6 +27,8 @@ extension View {
     @ViewBuilder
     func view(for destination: HomeDestination) -> some View {
         switch destination {
+        case .environments:
+            EnvironmentsView()
         case .resources:
             ResourcesView()
         case .language:
@@ -37,8 +39,6 @@ extension View {
             CirclePattern()
         case .mvArchitecture:
             MVArchitecture()
-        case .logging:
-            LoggingView()
         }
     }
 }

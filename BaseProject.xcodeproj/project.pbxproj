@@ -10,6 +10,8 @@
 		BB2893502B5FB9960054E2F3 /* BaseButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28934F2B5FB9960054E2F3 /* BaseButtonStyle.swift */; };
 		BB2893532B5FC56D0054E2F3 /* StyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2893522B5FC56D0054E2F3 /* StyleView.swift */; };
 		BB2893562B5FCC380054E2F3 /* BaseToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2893552B5FCC380054E2F3 /* BaseToggleStyle.swift */; };
+		BB38B4532B8C373900786DA4 /* EnvironmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38B4522B8C373900786DA4 /* EnvironmentsView.swift */; };
+		BB38B4572B8C7EBC00786DA4 /* DetectShakeGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38B4562B8C7EBC00786DA4 /* DetectShakeGestures.swift */; };
 		BB3BFC112B4BFB67003F8242 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BB3BFC102B4BFB67003F8242 /* Localizable.xcstrings */; };
 		BB3BFC132B4C0025003F8242 /* LocalizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BFC122B4C0025003F8242 /* LocalizableView.swift */; };
 		BB3BFC152B4C094A003F8242 /* LocalizedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BFC142B4C094A003F8242 /* LocalizedKey.swift */; };
@@ -84,6 +86,8 @@
 		BB28934F2B5FB9960054E2F3 /* BaseButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButtonStyle.swift; sourceTree = "<group>"; };
 		BB2893522B5FC56D0054E2F3 /* StyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleView.swift; sourceTree = "<group>"; };
 		BB2893552B5FCC380054E2F3 /* BaseToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseToggleStyle.swift; sourceTree = "<group>"; };
+		BB38B4522B8C373900786DA4 /* EnvironmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentsView.swift; sourceTree = "<group>"; };
+		BB38B4562B8C7EBC00786DA4 /* DetectShakeGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectShakeGestures.swift; sourceTree = "<group>"; };
 		BB3BFC102B4BFB67003F8242 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		BB3BFC122B4C0025003F8242 /* LocalizableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableView.swift; sourceTree = "<group>"; };
 		BB3BFC142B4C094A003F8242 /* LocalizedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKey.swift; sourceTree = "<group>"; };
@@ -206,6 +210,14 @@
 			path = ToggleStyle;
 			sourceTree = "<group>";
 		};
+		BB38B4512B8C36CD00786DA4 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				BB38B4522B8C373900786DA4 /* EnvironmentsView.swift */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
 		BB3BFC0F2B4BFB32003F8242 /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +320,7 @@
 				F81141872B66AD2600715C4E /* ConditionalViewModifier.swift */,
 				F81141882B66AD2600715C4E /* MaskContent.swift */,
 				F81141892B66AD2600715C4E /* PlatformViewModifier.swift */,
+				BB38B4562B8C7EBC00786DA4 /* DetectShakeGestures.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,6 +394,7 @@
 			children = (
 				BB9D1AA42B6A220000ABA3B8 /* HomeDataStore.swift */,
 				F8CAD3E12B6587F800D8CA0B /* HomeView.swift */,
+				BB38B4512B8C36CD00786DA4 /* Environments */,
 				F855EFF92B49238B000C6357 /* Resources */,
 				BB2893512B5FC5410054E2F3 /* Style */,
 				F81141982B66D08B00715C4E /* MetalShader */,
@@ -769,8 +783,10 @@
 				F8DA6D3A2B37DD7D00591D2B /* RootView.swift in Sources */,
 				F81141832B66AB8D00715C4E /* KeyWindow.swift in Sources */,
 				F8D996B42B383A060062BC9E /* AccessTokenManager.swift in Sources */,
+				BB38B4572B8C7EBC00786DA4 /* DetectShakeGestures.swift in Sources */,
 				F811418E2B66AD3300715C4E /* BindingMaxLength.swift in Sources */,
 				BB9D1AA82B6A351400ABA3B8 /* MVArchitecture.swift in Sources */,
+				BB38B4532B8C373900786DA4 /* EnvironmentsView.swift in Sources */,
 				F811418B2B66AD2600715C4E /* MaskContent.swift in Sources */,
 				BB2893532B5FC56D0054E2F3 /* StyleView.swift in Sources */,
 				F811418A2B66AD2600715C4E /* ConditionalViewModifier.swift in Sources */,
@@ -817,7 +833,7 @@
 			baseConfigurationReference = F8D9968E2B3804A30062BC9E /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ASSETCATALOG_COMPILER_APPICON_NAME)";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -883,7 +899,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8D9968E2B3804A30062BC9E /* Staging.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ASSETCATALOG_COMPILER_APPICON_NAME)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -892,6 +908,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BaseProject/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "TuanEm Indie Developer © 2023-2024";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -916,7 +933,7 @@
 			baseConfigurationReference = F8D9968C2B3804770062BC9E /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ASSETCATALOG_COMPILER_APPICON_NAME)";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -983,7 +1000,7 @@
 			baseConfigurationReference = F8D996902B3804BC0062BC9E /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ASSETCATALOG_COMPILER_APPICON_NAME)";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1042,7 +1059,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8D9968C2B3804770062BC9E /* Development.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ASSETCATALOG_COMPILER_APPICON_NAME)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1051,6 +1068,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BaseProject/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "TuanEm Indie Developer © 2023-2024";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1074,7 +1092,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8D996902B3804BC0062BC9E /* Production.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ASSETCATALOG_COMPILER_APPICON_NAME)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1083,6 +1101,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BaseProject/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "TuanEm Indie Developer © 2023-2024";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
