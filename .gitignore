@@ -4,7 +4,6 @@
 # User settings
 xcuserdata/
 *.xcuserstate
-*.xcworkspace
 
 # Xcode build files
 DerivedData/
@@ -17,9 +16,6 @@ DerivedData/
 *.ipa
 *.dSYM.zip
 *.dSYM
-
-# Swift Package Manager
-.build/
 
 # Fastlane
 fastlane/report.xml
