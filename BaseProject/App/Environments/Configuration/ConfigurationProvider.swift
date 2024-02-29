@@ -27,7 +27,7 @@ enum ConfigurationProvider {
         AppEnvironment(rawValue: config.lowercased())!
     }
     
-    /// Key-Value custom được điền trong các file .xcconfig
+    /// Key-Value được điền trong các file .xcconfig
     static var baseURL: String {
         try! InfoPlistConfig.value(for: Keys.baseURL)
     }
@@ -45,13 +45,13 @@ enum ConfigurationProvider {
     }
     
     // MARK: - Custom Flag
-    /// Custom flags theo các bước: Project ➝ Build Settings ➝ Swift Complier ➝ Custom Flags
+    /// Custom flags bằng key: OTHER_SWIFT_FLAGS
     /// Đặt tên theo cú pháp -DNAME
     /// Cách đặt tên ở đây chỉ là ví dụ, thường sẽ không đặt trùng với tên các config
     var customFlag: String {
-        #if PRODUCTION
+        #if PROD
         "PRODUCTION FLAGS"
-        #elseif DEVELOPMENT
+        #elseif DEV
         "DEVELOPMENT FLAGS"
         #else
         "STAGING FLAGS"

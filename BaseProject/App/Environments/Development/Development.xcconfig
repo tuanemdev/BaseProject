@@ -9,5 +9,6 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev
+OTHER_SWIFT_FLAGS = -DDEV -DMOCK
 BASE_URL = dev.tuanem.com
 GOOGLE_SERVICE_INFO_PLIST = App/Environments/Development/GoogleService-Info-Development.plist

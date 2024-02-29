@@ -9,5 +9,6 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
+OTHER_SWIFT_FLAGS = -DPROD -DREAL
 BASE_URL = prod.tuanem.com
 GOOGLE_SERVICE_INFO_PLIST = App/Environments/Production/GoogleService-Info-Production.plist
