@@ -47,6 +47,7 @@
 		F855EFFD2B492859000C6357 /* Data.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F855EFFC2B492859000C6357 /* Data.xcassets */; };
 		F855EFFF2B4928FD000C6357 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F855EFFE2B4928FD000C6357 /* Pet.swift */; };
 		F855F0012B499202000C6357 /* Symbols.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F855F0002B499202000C6357 /* Symbols.xcassets */; };
+		F88A60FB2B91228100915CF6 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A60FA2B91228100915CF6 /* Keychain.swift */; };
 		F8AD38432B91016F004F0CAC /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = F8AD38422B91016F004F0CAC /* Nuke */; };
 		F8AD38452B91016F004F0CAC /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = F8AD38442B91016F004F0CAC /* NukeExtensions */; };
 		F8AD38472B91016F004F0CAC /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = F8AD38462B91016F004F0CAC /* NukeUI */; };
@@ -127,6 +128,7 @@
 		F855EFFC2B492859000C6357 /* Data.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Data.xcassets; sourceTree = "<group>"; };
 		F855EFFE2B4928FD000C6357 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		F855F0002B499202000C6357 /* Symbols.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Symbols.xcassets; sourceTree = "<group>"; };
+		F88A60FA2B91228100915CF6 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		F8CAD3CD2B65816B00D8CA0B /* TabItemShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItemShape.swift; sourceTree = "<group>"; };
 		F8CAD3CE2B65816B00D8CA0B /* TabItemPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItemPosition.swift; sourceTree = "<group>"; };
 		F8CAD3CF2B65816B00D8CA0B /* TabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
@@ -386,6 +388,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		F88A60F92B9121AB00915CF6 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				F88A60FA2B91228100915CF6 /* Keychain.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		F8CAD3CC2B65813300D8CA0B /* CustomTabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				F8D996812B37FE8B0062BC9E /* Networking */,
+				F88A60F92B9121AB00915CF6 /* Storage */,
 				BB28934D2B5FB8FA0054E2F3 /* Styles */,
 				BBE1C71C2B62143500395C95 /* Components */,
 				F8D37E4A2B60FEED00248B7E /* Layout */,
@@ -789,6 +800,7 @@
 				F8D996B22B383A060062BC9E /* APIManager.swift in Sources */,
 				F81141952B66C63B00715C4E /* Router.swift in Sources */,
 				F855EFFF2B4928FD000C6357 /* Pet.swift in Sources */,
+				F88A60FB2B91228100915CF6 /* Keychain.swift in Sources */,
 				BB3BFC152B4C094A003F8242 /* LocalizedKey.swift in Sources */,
 				F8D996B12B383A060062BC9E /* APIRequestExample.swift in Sources */,
 				F8D996982B3815980062BC9E /* AppEnvironment.swift in Sources */,
